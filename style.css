@@ -108,28 +108,6 @@ a:link {
   top: 30px;
   font-size: 30px;
 }
-@media screen and (max-width: 768px) {
-  .header .container {
-    flex-direction: column;
-    padding: 8px 24px;
-  }
-  .header__menu {
-    display: none;
-    flex-direction: column;
-  }
-  .header__menu li {
-    width: 100%;
-    text-align: center;
-  }
-
-  .navbar__toogleBtn {
-    display: block;
-  }
-
-  .header__menu.active {
-    display: flex;
-  }
-}
 
 /* .header__menu__item:hover {
   border-bottom: 1px solid var(--color-accent);
@@ -463,4 +441,28 @@ form select {
   align-items: center;
   gap: 2rem;
   margin-top: 3rem;
+}
+@media screen and (max-width: 768px) {
+  .header .container {
+    flex-direction: column;
+    padding: 8px 24px;
+  }
+
+  .header__menu {
+    display: none;
+    flex-direction: column;
+  }
+
+  .header__menu li {
+    width: 100%;
+    text-align: center;
+  }
+
+  .navbar__toogleBtn {
+    display: block;
+  }
+
+  .header__menu.active {
+    display: flex;
+  }
 }
