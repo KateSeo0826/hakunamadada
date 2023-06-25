@@ -1,3 +1,5 @@
+
+// slide
 const slider = document.getElementsByClassName('slider')
 
 for (const s of slider) {
@@ -26,3 +28,12 @@ for (const s of slider) {
         s.scrollLeft = scrollLeft - (e.pageX - initialPageX)
     })
 }
+
+
+/* Toggle Button*/
+const toggleBtn = document.querySelector('.navbar__toogleBtn')
+const menu = document.querySelector('.header__menu')
+
+toggleBtn.addEventListener('click', () => {
+    menu.classList.toggle('active')
+})
