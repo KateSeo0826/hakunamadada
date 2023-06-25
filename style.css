@@ -130,9 +130,6 @@ a:link {
 }
 
 .main-img {
-  width: 588px;
-  height: 800px;
-  width: max-content;
   overflow-x: hidden;
 }
 
