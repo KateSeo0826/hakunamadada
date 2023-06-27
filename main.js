@@ -31,9 +31,15 @@ for (const s of slider) {
 
 
 /* Toggle Button*/
-const toggleBtn = document.querySelector('.navbar__toogleBtn')
-const menu = document.querySelector('.header__menu')
+const navbarMenu = document.querySelector('.header-menu')
+const toggleBtn = document.querySelector('.navbar-toggleBtn')
 
 toggleBtn.addEventListener('click', () => {
-    menu.classList.toggle('active')
+    navbarMenu.classList.toggle('open')
+})
+
+//Navbar menu click 
+
+navbarMenu.addEventListener('click', () => {
+    navbarMenu.classList.remove('open')
 })
