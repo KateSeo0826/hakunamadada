@@ -43,3 +43,34 @@ toggleBtn.addEventListener('click', () => {
 navbarMenu.addEventListener('click', () => {
     navbarMenu.classList.remove('open')
 })
+
+//tags color change after clicking
+
+let prevButton = null;
+let tagsButtons = document.querySelectorAll('.tags-btn')
+console.log(tagsButtons)
+// tagsBox.addEventListener('click', (e) => {
+//     const isButton = e.target.nodeName === 'BUTTON'
+//     if (!isButton) {
+//         return
+//     }
+//     e.target.classList.add('active')
+
+//     if (prevButton !== null) {
+//         prevButton.classList.remove('active')
+//     }
+//     prevButton = e.target;
+// })
+
+for (let i = 0; i < tagsButtons.length; i++) {
+    tagsButtons[i].addEventListener('click', (e) => {
+        let prevBtn = document.querySelector('.checked')
+        if (prevBtn) {
+            e.target.classList.add('checked')
+        }
+        else {
+            e.target.classList.add('checked')
+        }
+    })
+}
+

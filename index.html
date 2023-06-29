@@ -79,10 +79,14 @@
               <img src="assets/icon/png/search_black.png" class="search" />
             </li>
             <li>
-              <a class="header-menu-item" href="service.html">SERVICE</a>
+              <a id="service" class="header-menu-item" href="service.html"
+                >SERVICE</a
+              >
             </li>
             <li>
-              <a class="header-menu-item" href="#contact">CONTACT US</a>
+              <a id="contact" class="header-menu-item" href="#contact"
+                >CONTACT US</a
+              >
             </li>
             <li>
               <i class="header-menu-item fa-regular fa-bell"></i>
@@ -115,7 +119,10 @@
     </section>
     <section class="section-1">
       <div class="container">
-        <img class="banner-logo" src="assets/logo/png/logo_horizontal.png" />
+        <img
+          class="banner-logo logo-img"
+          src="assets/logo/png/logo_horizontal.png"
+        />
         <p class="banner-description">
           Your Vision, Our Expertise: Unforgettable Events. <br />We are wizards
           who transforms your dream of a memorable <br />event into a fun-filled
@@ -243,18 +250,18 @@
       <h3>Check our EVENT PRICE</h3>
     </section>
     <section class="section-5">
-      <div class="btn-container tags">
-        <button class="section-btn">Fire Breathing</button>
-        <button class="section-btn">Mascot</button>
-        <button class="section-btn">Clown</button>
-        <button class="section-btn">Neon Bubble</button>
-        <button class="section-btn">Handcraft</button>
-        <button class="section-btn">Juggler</button>
-        <button class="section-btn">Magics Show</button>
-        <button class="section-btn">Photo Booth</button>
-        <button class="section-btn">Cotton Candy</button>
-        <button class="section-btn">AR Invitation</button>
-        <button class="section-btn">Face Painting</button>
+      <div id="tags-box" class="btn-container tags">
+        <button id="button1" class="tags-btn">Fire Breathing</button>
+        <button id="button2" class="tags-btn">Mascot</button>
+        <button id="button3" class="tags-btn">Clown</button>
+        <button id="button4" class="tags-btn">Neon Bubble</button>
+        <button id="button5" class="tags-btn">Handcraft</button>
+        <button id="button6" class="tags-btn">Juggler</button>
+        <button id="button7" class="tags-btn">Magics Show</button>
+        <button id="button8" class="tags-btn">Photo Booth</button>
+        <button id="button9" class="tags-btn">Cotton Candy</button>
+        <button id="button10" class="tags-btn">AR Invitation</button>
+        <button id="button11" class="tags-btn">Face Painting</button>
       </div>
       <form>
         <div>
@@ -266,9 +273,9 @@
             placeholder="26 Scollard St"
           />
         </div>
-        <div>
+        <div class="form-box-one">
           <label for="number">Number of people</label><br />
-          <select id="adult">
+          <select class="adult-num" id="adult">
             <option value="1">1 Adults</option>
             <option value="2">2 Adults</option>
             <option value="3">3 Adults</option>
@@ -288,15 +295,17 @@
             <option value="10">10 Kids</option>
           </select>
         </div>
-        <div>
-          <label for="type">Type</label><br />
-          <select id="type">
-            <option value="birthday">Kids Birthday</option>
-          </select>
-        </div>
-        <div>
-          <label>Date</label><br />
-          <input class="date" type="date" value="2023-06-25" />
+        <div class="form-box-two">
+          <div>
+            <label for="type">Type</label><br />
+            <select id="type">
+              <option value="birthday">Kids Birthday</option>
+            </select>
+          </div>
+          <div>
+            <label>Date</label><br />
+            <input class="date" type="date" value="2023-06-25" />
+          </div>
         </div>
       </form>
       <button class="section-btn">Book Now &gt</button>

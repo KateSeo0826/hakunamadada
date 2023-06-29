@@ -98,10 +98,6 @@ button:focus {
   outline: none;
 }
 
-img {
-  width: auto;
-}
-
 p {
   font-size: 2rem;
 }
@@ -117,6 +113,7 @@ h1 {
 
 .container {
   max-width: 1200px;
+  margin: auto;
 }
 
 .section-btn {
@@ -149,11 +146,12 @@ h1 {
 }
 
 .header-menu {
+  font-family: pretendard, sans-serif;
   display: flex;
-  font-family: "Pretendard-Medium";
   align-items: center;
-  gap: 4px;
+  gap: 1.2rem;
   color: black;
+  font-weight: 500;
 }
 
 .header-menu-item {
@@ -192,7 +190,7 @@ a:link {
   display: flex;
   justify-content: space-between;
   align-items: end;
-  margin: 1.5rem auto;
+  margin: 3rem auto 7rem;
 }
 
 .banner-logo {
@@ -226,6 +224,7 @@ a:link {
   grid-template-rows: repeat(6, 5vw);
   grid-gap: 15px;
 }
+
 .gallery-img {
   width: 100%;
   height: 100%;
@@ -282,6 +281,7 @@ a:link {
   grid-row-end: 8;
   margin-top: -1rem;
 }
+
 /* section-2 */
 
 .section-2 {
@@ -372,11 +372,28 @@ a:link {
   justify-content: center;
 }
 /* section5 */
-.tags button {
+.btn-container {
   max-width: 1280px;
+}
+
+.tags-btn {
+  width: 180px;
+  height: 40px;
+  background-color: transparent;
+  margin: 2rem auto;
+  border: 1px solid #262626;
+  border-radius: 20px;
+  display: block;
+}
+
+.tags-btn.checked {
+  background-color: #262626;
+  color: #ffffff;
+}
+
+.tags button {
   display: inline-block;
   width: fit-content;
-  height: 50px;
   padding: 0 20px;
   font-size: 20px;
   margin: unset;
@@ -405,18 +422,17 @@ a:link {
 form {
   display: flex;
   justify-content: center;
-  max-width: 1280px;
   margin: 0 auto;
 }
 
-form div {
-  margin: 1rem;
+.form-box-two {
+  display: flex;
 }
 
 #location {
   width: 360px;
   height: 48px;
-  margin: 0.5rem 0;
+  margin: 0.5rem 0.5rem 0 0;
   border-radius: 24px;
   border: none;
   background-color: #f2f2f2;
@@ -426,7 +442,7 @@ form div {
 form select {
   width: 180px;
   height: 48px;
-  margin: 0.5rem 0;
+  margin: 0.5rem 0.5rem;
   border-radius: 24px;
   border: none;
   background-color: #f2f2f2;
@@ -436,7 +452,7 @@ form select {
 .date {
   width: 180px;
   height: 48px;
-  margin: 0.5rem 0;
+  margin: 0.5rem 0.5rem;
   border-radius: 24px;
   border: none;
   background-color: #f2f2f2;
@@ -526,6 +542,38 @@ form select {
 }
 
 @media screen and (max-width: 768px) {
+  .header-menu {
+    gap: 0.5rem;
+  }
+  #service {
+    display: none;
+  }
+  #contact {
+    display: none;
+  }
+  .header-menu-item {
+    display: block;
+    padding: 8px 5px;
+  }
+  .section-banner .container {
+    margin: 1rem 1rem 5.6rem;
+  }
+  .banner-title h1 {
+    font-size: 2rem;
+  }
+
+  .banner-subtitle {
+    margin-top: 1rem;
+    font-size: 1rem;
+  }
+
+  .banner-img {
+    width: 400px;
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
   .header .container {
     flex-direction: column;
     padding: 8px 24px;
@@ -538,6 +586,7 @@ form select {
   .header-menu {
     display: none;
     flex-direction: column;
+    gap: 0.5rem;
     margin: 1rem 1rem;
   }
 
@@ -564,17 +613,43 @@ form select {
     font-size: 1.5rem;
     line-height: 1.5;
   }
+
   .banner-img {
     margin-bottom: 1rem;
     width: 100%;
   }
+
   .banner-subtitle {
     margin-top: 1rem;
     font-size: 1rem;
   }
 
+  .banner-logo.logo-image {
+    width: 230px;
+    height: auto;
+  }
+
   form {
     flex-direction: column;
+  }
+
+  form select {
+    width: 150px;
+    height: 40px;
+  }
+
+  form div {
+    margin: 0.5rem 0.5rem;
+  }
+
+  .form-box-two {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .form-box-two .date {
+    width: 150px;
+    height: 40px;
   }
 
   .footer {
