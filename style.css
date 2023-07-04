@@ -93,7 +93,8 @@ input:focus,
 input:hover,
 button,
 button:hover,
-button:focus {
+button:focus,
+textarea {
   font-family: "Gilroy-Regular";
   outline: none;
 }
@@ -190,7 +191,7 @@ a:link {
   display: flex;
   justify-content: space-between;
   align-items: end;
-  margin: 3rem auto 7rem;
+  margin: 3r m auto 7rem;
 }
 
 .banner-logo {
@@ -372,6 +373,11 @@ a:link {
   justify-content: center;
 }
 /* section5 */
+.section-5 {
+  background-color: #ffffff;
+  height: 100%;
+}
+
 .btn-container {
   max-width: 1280px;
 }
@@ -412,11 +418,6 @@ a:link {
   height: 550px;
   background-color: #ffffff;
   border-radius: 40px;
-}
-
-.section-5 {
-  background-color: #ffffff;
-  height: 100%;
 }
 
 form {
@@ -471,7 +472,136 @@ form select {
   left: 45%;
 }
 
-/* Footer */
+/* Modal Start */
+.modal-container {
+  position: relative;
+  margin: 0 auto;
+}
+
+.modal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.4rem;
+  width: 432px;
+  padding: 1.3rem;
+  min-height: 250px;
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  background-color: white;
+  box-shadow: 5px 5px 20px #4d4d4d26;
+  border-radius: 24px;
+}
+
+.modal p {
+  font-size: 1rem;
+}
+
+.modal {
+  z-index: 2;
+}
+
+.hidden {
+  display: none;
+}
+
+.modal h3 {
+  margin: 3rem auto;
+}
+
+.modal-btn-box {
+  margin: 1rem auto;
+}
+
+.modal input,
+textarea {
+  width: 100%;
+  padding: 0.7rem 1rem;
+  border: 1px solid #ddd;
+  border-radius: 16px;
+  font-size: 0.9em;
+}
+
+.modal textarea {
+  height: 140px;
+}
+
+.input-icons {
+  width: 100%;
+  margin: auto 0;
+}
+
+input::placeholder {
+  padding: 1rem;
+}
+
+textarea::placeholder {
+  padding: 0 1rem;
+}
+
+.input-icons i {
+  position: absolute;
+  margin: 1.2rem 0.5rem;
+}
+
+.input-icons img {
+  position: absolute;
+  margin: 0.7rem 0.5rem;
+}
+
+.icon {
+  background-color: #ff5a5aa8;
+  padding: 5px;
+  width: 20px;
+  height: 20px;
+}
+
+.btn {
+  width: 180px;
+  height: 40px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.input-box-one {
+  display: flex;
+  flex-direction: column;
+  gap: inherit;
+}
+
+.input-box-two {
+  display: flex;
+  gap: inherit;
+}
+
+.btn-close {
+  background-color: #ffffff;
+  color: #262626;
+}
+
+.btn-submit {
+  background-color: #262626;
+  color: #ffffff;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+  z-index: 1;
+}
+/* Modal End */
+
+/* Footer Start */
 .footer-container {
   background-color: #262626;
 }
@@ -540,6 +670,7 @@ form select {
 .links-box li a {
   color: #ffffff;
 }
+/* Footer End */
 
 @media screen and (max-width: 768px) {
   .header-menu {

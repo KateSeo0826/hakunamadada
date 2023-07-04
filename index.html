@@ -308,12 +308,82 @@
           </div>
         </div>
       </form>
-      <button class="section-btn">Book Now &gt</button>
+      <button class="section-btn btn-book btn-open">Book Now &gt</button>
       <div class="section5-img">
         <img class="bubble" src="assets/puppy/bubble.png" alt="bubble" />
         <img src="assets/puppy/puppy.png" alt="puppy" />
       </div>
     </section>
+
+    <section class="modal-container">
+      <form class="modal hidden" method="post" name="ContactForm" id="ContactForm" action="send-email.php">
+        <h3>Booking contact details</h3>
+        <p>Contact me via...</p>
+        <div class="input-box-one">
+          <div class="input-icons">
+          <img class="icon" src="./assets/booking_icon/png/email.png"></i>
+            <input
+              class="input-field"
+              type="text"
+              name="email"
+              id="email"
+              placeholder="Email"
+              required
+            />
+            </div>
+          <div class="input-icons">
+          <img class="icon" src="./assets/booking_icon/png/call.png"></i>
+          <input
+            class="input-field"
+            type="tel"
+            name="userPhone"
+            id="phone"
+            placeholder="Phone"
+            required
+          />
+          </div>
+        </div>
+        <div class="input-box-two">
+          <div class="input-icons">
+          <img class="icon" src="./assets/booking_icon/png/text.png"></i>
+          <input class="input-field center" 
+          type="text" 
+          name="userText"
+          id="text" 
+          placeholder="Text"
+          required />
+          </div>
+          <div class="input-icons">
+          <img class="icon" src="./assets/booking_icon/png/call.png"></i>
+          <input class="input-field center" 
+          type="call" 
+          name="userCall"
+          id="userCall" 
+          placeholder="Call"
+           required/>
+          </div>
+        </div>
+        <div class="input-icons">
+          <img class="icon" src="./assets/booking_icon/png/message.png"></i>
+        <textarea
+          class="input-field"
+          type="message"
+          name="userMessage"
+          id="userMessage"
+          placeholder="Message"
+          required
+        ></textarea>
+          </div>
+        <div class="modal-btn-box">
+          <button class="btn btn-close">Back</button>
+          <button type="submit" name="send"
+          value="Submit"
+          class="btn btn-submit">Complete</button>
+        </div>
+      </form>
+    </section>
+    <div class="overlay hidden"></div>
+
     <footer class="footer-container">
       <div class="footer container">
         <div class="icons">
