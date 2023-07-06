@@ -127,6 +127,8 @@ h1 {
   display: block;
 }
 
+/*==========Common CSS End==========*/
+
 /* Header */
 .header {
   background-color: #ffe69f;
@@ -348,11 +350,13 @@ a:link {
 
 .wave-img {
   margin-top: 2rem;
+  width: 100%;
   height: 281px;
 }
 
 .card img {
   margin: 1.5rem;
+  border-radius: 2rem;
 }
 
 .card p {
@@ -364,22 +368,20 @@ a:link {
   margin: 0 0 3.5rem 1.5rem;
 }
 
-.section-5 .tags {
-  max-width: 1280px;
-  display: flex;
+/* section5 */
+.section-5 {
+  max-width: 1200px;
+  height: 100%;
   margin: 3rem auto;
+  background-color: #ffffff;
+}
+.btn-container {
+  max-width: 1100px;
+  margin: 3rem auto;
+  display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
   justify-content: center;
-}
-/* section5 */
-.section-5 {
-  background-color: #ffffff;
-  height: 100%;
-}
-
-.btn-container {
-  max-width: 1280px;
 }
 
 .tags-btn {
@@ -417,7 +419,7 @@ a:link {
   width: 484px;
   height: 550px;
   background-color: #ffffff;
-  border-radius: 40px;
+  border-radius: 2.5rem;
 }
 
 form {
@@ -693,6 +695,11 @@ textarea::placeholder {
     font-size: 2rem;
   }
 
+  .banner-logo {
+    width: 128px;
+    height: auto;
+  }
+
   .banner-subtitle {
     margin-top: 1rem;
     font-size: 1rem;
@@ -701,6 +708,87 @@ textarea::placeholder {
   .banner-img {
     width: 400px;
     height: auto;
+  }
+
+  .card {
+    width: 208px;
+    height: 306px;
+  }
+
+  .card img {
+    width: 192px;
+    height: auto;
+    margin: 0.5rem;
+  }
+  .card p {
+    font-size: 1rem;
+    margin: 0 1rem;
+  }
+  .card h2 {
+    font-size: 1.2rem;
+    margin: 0 0 2.5rem 1rem;
+  }
+
+  .banner-description {
+    font-size: 0.8rem;
+  }
+
+  .section2-h2-box {
+    width: 200px;
+    margin: 0 auto;
+  }
+  .section-2 h2 {
+    font-size: 1.5rem;
+  }
+
+  .section-2 p {
+    font-size: 0.75rem;
+  }
+  .characters-image img {
+    width: 30%;
+  }
+
+  .slide-photo img {
+    width: 95%;
+    height: auto;
+  }
+
+  .section-4 h3 {
+    font-size: 1.5rem;
+  }
+
+  .wave-img {
+    height: auto;
+  }
+
+  .tags button {
+    padding: 8px;
+    font-size: 1rem;
+  }
+
+  .section-5 .tags {
+    gap: 1rem;
+  }
+
+  .section5-img {
+    margin: 6rem auto;
+  }
+  .bubble {
+    top: -20%;
+    left: 35%;
+    width: 30%;
+  }
+  .puppy {
+    width: 35%;
+  }
+
+  .contact-box {
+    flex-direction: column;
+  }
+
+  .tel-box a {
+    margin-right: unset;
+    font-size: 1.5rem;
   }
 }
 
@@ -765,12 +853,16 @@ textarea::placeholder {
   }
 
   form select {
-    width: 150px;
+    width: 152px;
     height: 40px;
   }
 
   form div {
     margin: 0.5rem 0.5rem;
+  }
+
+  .form-box-one {
+    margin: 1rem auto;
   }
 
   .form-box-two {
@@ -779,7 +871,7 @@ textarea::placeholder {
   }
 
   .form-box-two .date {
-    width: 150px;
+    width: 152px;
     height: 40px;
   }
 
