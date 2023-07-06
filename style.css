@@ -375,6 +375,7 @@ a:link {
   margin: 3rem auto;
   background-color: #ffffff;
 }
+
 .btn-container {
   max-width: 1100px;
   margin: 3rem auto;
@@ -382,6 +383,16 @@ a:link {
   flex-wrap: wrap;
   gap: 1.5rem;
   justify-content: center;
+}
+
+.location-icon {
+  position: relative;
+  margin-bottom: 10px;
+}
+.location-icon i {
+  position: absolute;
+  top: 55%;
+  left: 1rem;
 }
 
 .tags-btn {
@@ -435,6 +446,7 @@ form {
 #location {
   width: 360px;
   height: 48px;
+  padding: 1rem;
   margin: 0.5rem 0.5rem 0 0;
   border-radius: 24px;
   border: none;
@@ -744,6 +756,7 @@ textarea::placeholder {
   .section-2 p {
     font-size: 0.75rem;
   }
+
   .characters-image img {
     width: 30%;
   }
@@ -752,7 +765,10 @@ textarea::placeholder {
     width: 95%;
     height: auto;
   }
-
+  .section-3 h2 {
+    font-size: 0.75rem;
+    padding: 1rem 0;
+  }
   .section-4 h3 {
     font-size: 1.5rem;
   }
@@ -852,6 +868,9 @@ textarea::placeholder {
     flex-direction: column;
   }
 
+  form label {
+    color: #7e7e7e;
+  }
   form select {
     width: 152px;
     height: 40px;
