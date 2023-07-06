@@ -766,6 +766,7 @@ textarea::placeholder {
     height: auto;
   }
   .section-3 h2 {
+    width: fit-content;
     font-size: 0.75rem;
     padding: 1rem 0;
   }
@@ -805,6 +806,10 @@ textarea::placeholder {
   .tel-box a {
     margin-right: unset;
     font-size: 1.5rem;
+  }
+
+  .word-animation-box {
+    width: fit-content;
   }
 }
 
