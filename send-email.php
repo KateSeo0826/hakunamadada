@@ -1,6 +1,5 @@
 <?php
 
-
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 
@@ -13,7 +12,6 @@ $text = $_POST['Text'];
 $call = $_POST['Call'];  
 $message = $_POST['Message'];
 
-echo $message . "\n" . $email ;
 
 $email = sanitizeEmail($email);
 $phone = cleanInput($phone);  
@@ -27,14 +25,14 @@ if(empty($email) || empty($phone) || empty($text) || empty($call) || empty($mess
  exit;
 }
 else{
-    if(!filter_var($email, FILTER_VALIDATE_EMAIL) === false) {
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL) === false) { 
 
         //Send Email to admin
         $subject = "Contact Form";
         $message = cutString($message, 1000);                
         $message = nl2br($message);  //Replace new lines with <br>
         $messageOkText = "Your message has been sent successfully. We will contact you as soon as possible.";
-        $messageBody = `<table border="1" width="100%" cellspacing="3" cellpadding="4">
+        $messageBody = '<table border="1" width="100%" cellspacing="3" cellpadding="4">
         <tbody>
             <tr><td style="font-size: 14px; font-weight: bold; background-color: #000000; color: #FFFFFF;">E-Mail</td></tr>
             <tr><td>'.$email.'</td></tr>
@@ -45,15 +43,34 @@ else{
             <tr><td style="font-size: 14px; font-weight: bold; background-color: #000000; color: #FFFFFF;">Message</td></tr>
             <tr><td>'.$call.'</td></tr>
         </tbody>
-        </table>`;
-        $altBody = 'Name: '.$email;
+        </table>';
+        $altBody = "Name";
         $addAddress = "kateseo@adsologist.com"; 
-        $responseMessage = '<div class="alert alert-success" role="alert"><i class="fa-solid fa-circle-check"></i>Hi, I am good</div>';
+        $responseMessage = '
+        <body style="z-index:2; font-family: Arial, Helvetica, sans-serif;">
+        <div style="width: 432px; height: 600px; margin: 0 auto; border-radius: 1.5rem; box-shadow: 5px 5px 20px #4D4D4D26; z-index:1;" class="alert alert-success" role="alert"><i class="fa-solid fa-circle-check"></i>
+        <div style="padding: 3.5rem 1.5rem">
+        <h2 style="text-align: center; font-size: 1.5rem;">Completed!</h2>
+        <p style="color:# 7E7E7E; margin-top: 2.5rem;">Our agent will contact you within 2-3 business days.</p>
+        <h3 style="color: #7E7E7E">Email<h3>
+        <p>'.$email.'</p>
+        <h3 style="color:#7E7E7E; padding-bottom: 0">Phone Number<h3>
+        <p>+'.$phone.'</p>
+        <h3 style="color: #7E7E7E">Message<h3>
+        <p>'.$message.'</p>
+        <div style="margin: 3rem auto;">
+        <button style="background-color: #ffffff; color: #262626; outline:none; width: 180px; height: 40px; border-radius: 20px; text-align:center; font-size:1rem;">Back</button>
+        <button style="background-color: #262626; outline: none; width: 180px; height: 40px; border-radius: 20px; text-align: center; font-size: 1rem;">
+        <a style="text-decoration: none; color: #ffffff" href="/hakunamadada">Confirm</a></button>
+        </div>
+        </div>
+        </div>
+        </body>';
         
         sendMail($subject, $messageBody, $altBody, $addAddress, $responseMessage);
 
-        //Send email to User
-        $companyName = "Adsologist Inc.";
+        // Send email to User
+                $companyName = "Adsologist Inc.";
                 $site_url = "https://www.adsologist.com";
                 $site_phone = "+1 437 255 0237";
                 $subject_To = "Thank you for enquiring with us, one of our experts will be in touch with you as soon as possible.";
@@ -93,6 +110,7 @@ else{
         exit;
     }
 }
+
 //Sanitize user Input to escape HTML entities and filter out dangerous characters.
 function cleanInput($input) {
     $input = trim($input);
@@ -121,7 +139,7 @@ function cutString($string, $length) {
 
 
 
-function sendMail($subject,$messageBody,$altBody,$addAddress,$responseMessage = NULL) {
+function sendMail($subject,$messageBody,$altBody,$addAddress,$responseMessage=Null) {
 
 $company = "Adsologist Inc.";
 $MessageFaultText = "Your message could not be sent. Please try again later.";
@@ -131,7 +149,7 @@ $mail = new PHPMailer;
 
 
 //Passing 'true' enables exceptions 
-$username = var_dump($_Mail_USERNAME);
+
 try {
 
     //Server Setting
@@ -145,9 +163,9 @@ try {
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;;
     $mail->SMTPAuth = true;
 
-    $mail->Username = '';
+    $mail->Username = 'kateseo@adsologist.com';
 
-    $mail->Password = '';
+    $mail->Password = 'yokkwvdaelflvddk';
 
     $mail->setFrom('kateseo@adsologist.com', $company);
     $mail->addAddress($addAddress);
@@ -173,39 +191,5 @@ else {
     echo 'Mailer Error: ' . $mail->ErrorInfo;
 }
 }
-// echo "email sent"
-// //send the message, check for errors
-// if (!$mail->send()) {
-//     echo 'Mailer Error: ' . $mail->ErrorInfo;
-// } else {
-//     echo 'Message sent!';
-//     //Section 2: IMAP
-//     //Uncomment these to save your message in the 'Sent Mail' folder.
-//     #if (save_mail($mail)) {
-//     #    echo "Message saved!";
-//     #}
-// }
-
-//Section 2: IMAP
-//IMAP commands requires the PHP IMAP Extension, found at: https://php.net/manual/en/imap.setup.php
-//Function to call which uses the PHP imap_*() functions to save messages: https://php.net/manual/en/book.imap.php
-//You can use imap_getmailboxes($imapStream, '/imap/ssl', '*' ) to get a list of available folders or labels, this can
-//be useful if you are trying to get this working on a non-Gmail IMAP server.
-// function save_mail($mail)
-// {
-//     //You can change 'Sent Mail' to any other folder or tag
-//     $path = '{imap.gmail.com:993/imap/ssl}[Gmail]/Sent Mail';
-
-//     //Tell your server to open an IMAP connection using the same username and password as you used for SMTP
-//     $imapStream = imap_open($path, $mail->Username, $mail->Password);
-
-//     $result = imap_append($imapStream, $path, $mail->getSentMIMEMessage());
-//     imap_close($imapStream);
-
-//     return $result;
-// }
-
-
-
 
 ?>

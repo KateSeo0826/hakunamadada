@@ -680,16 +680,23 @@ textarea::placeholder {
 }
 /* Footer End */
 
-@media screen and (max-width: 768px) {
-  .header-menu {
-    gap: 0.5rem;
-  }
+@media screen and (max-width: 1024px) {
   #service {
     display: none;
   }
   #contact {
     display: none;
   }
+  form {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .header-menu {
+    gap: 0.5rem;
+  }
+
   banner-logo #contact {
     display: none;
   }
