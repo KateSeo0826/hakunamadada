@@ -163,9 +163,9 @@ try {
     $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;;
     $mail->SMTPAuth = true;
 
-    $mail->Username = '';
+    $mail->Username = "kateseo@adsologist.com";
 
-    $mail->Password = '';
+    $mail->Password = "yokkwvdaelflvddk";
 
     $mail->setFrom('kateseo@adsologist.com', $company);
     $mail->addAddress($addAddress);

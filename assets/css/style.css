@@ -36,22 +36,35 @@
 @font-face {
   font-family: "Gilroy-Regular";
   src: local("Gilroy-Regular"),
-    url("assets/fonts/Gilroy-Regular.woff") format("woff");
+    url("../fonts/Gilroy-Regular.woff") format("woff");
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
   font-family: "Gilroy-Bold";
-  src: local("Gilroy-Bold"), url("assets/fonts/Gilroy-Bold.woff") format("woff");
+  src: local("Gilroy-Bold"), url("../fonts/Gilroy-Bold.woff") format("woff");
   font-style: normal;
   font-weight: normal;
 }
 @font-face {
-  src: local("Pretendard"),
-    url("assets/fonts/Pretendard-Medium.otf") format("otf");
+  src: local("Pretendard"), url("../fonts/Pretendard-Medium.otf") format("otf");
   font-family: "Pretendard-Medium";
   font-style: normal;
   font-weight: normal;
+}
+@font-face {
+  font-family: "FontAwesome";
+  src: url("../fonts/fontawesome-webfonte0a5.eot?v=4.3.0");
+  src: url("../fonts/fontawesome-webfontd41d.eot?#iefix&v=4.3.0")
+      format("embedded-opentype"),
+    url("../fonts/fontawesome-webfonte0a5.woff2?v=4.3.0") format("woff2"),
+    url("../fonts/fontawesome-webfonte0a5.woff?v=4.3.0") format("woff"),
+    url("../fonts/fontawesome-webfonte0a5.ttf?v=4.3.0") format("truetype"),
+    url("../fonts/fontawesome-webfonte0a5.svg?v=4.3.0#fontawesomeregular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
 }
 
 /*==========Fonts CSS End==========*/
@@ -66,28 +79,23 @@
 body {
   font-family: "Gilroy-Regular";
 }
-/* Hide scrollbar for Chrome, Safari and Opera */
 body *::-webkit-scrollbar {
   display: none;
 }
-
 body * {
-  scrollbar-width: none; /* Firefox */
+  scrollbar-width: none;
 }
-
 ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
-
 a,
 a:hover,
 a:focus {
   text-decoration: none;
   outline: none;
 }
-
 input,
 input:focus,
 input:hover,
@@ -99,74 +107,68 @@ textarea {
   font-family: "Gilroy-Regular";
   outline: none;
 }
-
 p {
   font-size: 2rem;
 }
-
 .dark-bg {
   background-color: #262626;
 }
-
 h1 {
   font-size: 3rem;
   font-weight: bold;
 }
-
 .container {
   max-width: 1200px;
   margin: auto;
 }
-
 .section-btn {
   width: 228px;
   height: 44px;
   background-color: transparent;
-  margin: 3rem auto;
   border: 1px solid #262626;
   border-radius: 39px;
   display: block;
 }
 
-/*==========Common CSS End==========*/
+.section-btn:hover {
+  width: 228px;
+  height: 44px;
+  background-color: #262626;
+  color: #ffffff;
+}
 
+/*==========Common CSS End==========*/
 /* Header */
 .header {
   background-color: #ffe69f;
   padding: 1rem;
   border-bottom: 1px solid black;
 }
-
 .header .container {
   display: flex;
   margin: 0 auto;
   justify-content: space-between;
   align-items: center;
 }
-
 .header-logo-img {
   width: 282px;
   height: 50px;
 }
-
 .header-menu {
   font-family: pretendard, sans-serif;
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  gap: 1rem;
   color: black;
   font-weight: 500;
 }
-
 .header-menu-item {
   display: block;
   padding: 8px 16px;
 }
-
 a:link {
   color: black;
 }
-
 .navbar-toggleBtn {
   display: none;
   color: #262626;
@@ -175,93 +177,80 @@ a:link {
   left: 1rem;
   top: 1.9rem;
 }
-
 .section-banner {
-  padding: 1.5rem 0;
+  padding: 4.5rem 0 7rem;
   background-color: #ffe69f;
 }
-
 .section-banner .container {
   display: flex;
   justify-content: space-between;
   align-items: end;
-  margin: 3r m auto 7rem;
+  margin: 3rem auto 7rem;
 }
-
-.banner-logo {
+.about-us-logo {
   margin: 6rem 0 2.5rem;
 }
-
-.banner-description {
+.about-us-description {
   color: #4d4d4d;
+  letter-spacing: -0.64px;
 }
-
 .banner-img {
   overflow-x: hidden;
 }
 
-/* section-1 */
-.section-1 {
+/* About-Us */
+.main-about-us {
   background-color: #ffffff;
   text-align: center;
 }
-
-.section-1 .container {
+.main-about-us .container {
   flex: flex;
   margin: 0 auto;
   font-family: "Gilroy-Regular";
 }
-
-.photo-gallery {
+.about-us-gallery {
   margin-bottom: 1rem;
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   grid-template-rows: repeat(6, 5vw);
   grid-gap: 15px;
 }
-
 .gallery-img {
   width: 100%;
   height: 100%;
   border-radius: 40px;
   object-fit: cover;
 }
-
 .gallery-item-1 {
   grid-column-start: 2;
   grid-column-end: 4;
   grid-row-start: 3;
   grid-row-end: 6;
 }
-
 .gallery-item-2 {
   grid-column-start: 2;
   grid-column-end: 4;
   grid-row-start: 6;
   grid-row-end: 9;
 }
-
 .gallery-item-3 {
   grid-column-start: 4;
   grid-column-end: 6;
   grid-row-start: 2;
   grid-row-end: 7;
 }
-
 .gallery-item-4 {
   grid-column-start: 4;
   grid-column-end: 6;
   grid-row-start: 7;
   grid-row-end: 11;
 }
-
 .gallery-item-5 {
   grid-column-start: 4;
   grid-column-end: 6;
   grid-row-start: 11;
   grid-row-end: 13;
 }
-
 .gallery-item-6 {
   grid-column-start: 6;
   grid-column-end: 8;
@@ -276,9 +265,11 @@ a:link {
   grid-row-end: 8;
   margin-top: -1rem;
 }
+.about-us-btn {
+  margin: 6rem auto;
+}
 
 /* section-2 */
-
 .section-2 {
   width: 100%;
   background-color: #cceace;
@@ -287,12 +278,10 @@ a:link {
   justify-content: center;
   text-align: center;
 }
-
 .section-2 h2 {
   font-family: "Gilroy-Bold";
   font-size: 3rem;
-  margin-top: 7.75rem;
-  margin-bottom: 5rem;
+  margin: 3rem auto;
 }
 .characters-image {
   margin-bottom: 2rem;
@@ -301,6 +290,9 @@ a:link {
   display: flex;
   overflow-x: scroll;
 }
+.section2-btn {
+  margin: 3rem auto 7.5rem;
+}
 
 /* section3 */
 .section-3 div:first-child {
@@ -308,7 +300,6 @@ a:link {
   width: max-content;
   overflow-x: hidden;
 }
-
 .section-3 h2 {
   color: white;
   padding: 1.5rem 0;
@@ -317,7 +308,6 @@ a:link {
 .word-animation {
   animation: 50s infinite linear rotatingWord;
 }
-
 @keyframes rotatingWord {
   from {
     transform: translateX(0%);
@@ -326,32 +316,27 @@ a:link {
     transform: translateX(-25%);
   }
 }
-
 .section-4 {
   background-color: #cceace;
   width: 100%;
-  height: 100%;
+  height: auto;
   overflow: hidden;
 }
-
 .section-4 h3 {
   font-family: "Gilroy-Bold";
-  margin: 2rem;
-  padding: 1rem;
+  margin: 6rem 0 5rem;
   font-size: 2rem;
   text-align: center;
 }
-
 .wave-img {
+  margin: 2rem 0 1rem;
   width: 100%;
   height: auto;
 }
-
 .card img {
   margin: 1.5rem;
   border-radius: 2rem;
 }
-
 .card p {
   font-size: 20px;
   margin: 0 1.5rem;
@@ -368,16 +353,17 @@ a:link {
   margin: 3rem auto;
   background-color: #ffffff;
 }
-
 .btn-container {
-  max-width: 1100px;
-  margin: 3rem auto;
+  max-width: 1200px;
+  margin: 7rem auto 3rem;
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
   justify-content: center;
 }
-
+.section5-btn {
+  margin: 3rem auto;
+}
 .location-icon {
   position: relative;
   margin-bottom: 10px;
@@ -387,7 +373,6 @@ a:link {
   top: 55%;
   left: 1rem;
 }
-
 .tags-btn {
   width: 180px;
   height: 40px;
@@ -397,56 +382,48 @@ a:link {
   border-radius: 20px;
   display: block;
 }
-
 .tags-btn.checked {
   background-color: #262626;
   color: #ffffff;
 }
-
 .tags button {
-  display: inline-block;
   width: fit-content;
+  display: inline-block;
+  margin: unset;
   padding: 0 20px;
   font-size: 20px;
-  margin: unset;
 }
-
 .card-wrapper {
+  max-width: 1280px;
   display: flex;
   margin: 0 auto;
-  max-width: 1280px;
-  overflow-x: scroll;
   gap: 0.5rem;
+  overflow-x: scroll;
 }
-
 .card {
   width: 484px;
   height: 550px;
   background-color: #ffffff;
   border-radius: 2.5rem;
 }
-
 form {
   display: flex;
   justify-content: center;
   margin: 0 auto;
+  font-family: "Gilroy-Regular";
 }
-
 .form-box-two {
   display: flex;
 }
-
 #location {
   width: 360px;
   height: 48px;
-  padding: 1rem;
   margin: 0.5rem 0.5rem 0 0;
   border-radius: 24px;
   border: none;
   background-color: #f2f2f2;
   color: #7e7e7e;
 }
-
 form select {
   width: 180px;
   height: 48px;
@@ -456,7 +433,6 @@ form select {
   background-color: #f2f2f2;
   color: #7e7e7e;
 }
-
 .date {
   width: 180px;
   height: 48px;
@@ -466,14 +442,12 @@ form select {
   background-color: #f2f2f2;
   color: #7e7e7e;
 }
-
 .section5-img {
-  text-align: center;
   max-width: 1280px;
   margin: 3rem auto;
   position: relative;
+  text-align: center;
 }
-
 .bubble {
   position: absolute;
   left: 45%;
@@ -484,7 +458,6 @@ form select {
   position: relative;
   margin: 0 auto;
 }
-
 .modal {
   display: flex;
   flex-direction: column;
@@ -501,27 +474,21 @@ form select {
   box-shadow: 5px 5px 20px #4d4d4d26;
   border-radius: 24px;
 }
-
 .modal p {
   font-size: 1rem;
 }
-
 .modal {
   z-index: 2;
 }
-
 .hidden {
   display: none;
 }
-
 .modal h3 {
   margin: 3rem auto;
 }
-
 .modal-btn-box {
   margin: 1rem auto;
 }
-
 .modal input,
 textarea {
   width: 100%;
@@ -530,41 +497,33 @@ textarea {
   border-radius: 16px;
   font-size: 0.9em;
 }
-
 .modal textarea {
   height: 140px;
 }
-
 .input-icons {
   width: 100%;
   margin: auto 0;
 }
-
 input::placeholder {
   padding: 1rem;
 }
-
 textarea::placeholder {
   padding: 0 1rem;
 }
-
 .input-icons i {
   position: absolute;
   margin: 1.2rem 0.5rem;
 }
-
 .input-icons img {
   position: absolute;
   margin: 0.7rem 0.5rem;
 }
-
 .icon {
   background-color: #ff5a5aa8;
   padding: 5px;
   width: 20px;
   height: 20px;
 }
-
 .btn {
   width: 180px;
   height: 40px;
@@ -572,28 +531,23 @@ textarea::placeholder {
   text-align: center;
   font-size: 1rem;
 }
-
 .input-box-one {
   display: flex;
   flex-direction: column;
   gap: inherit;
 }
-
 .input-box-two {
   display: flex;
   gap: inherit;
 }
-
 .btn-close {
   background-color: #ffffff;
   color: #262626;
 }
-
 .btn-submit {
   background-color: #262626;
   color: #ffffff;
 }
-
 .overlay {
   position: fixed;
   top: 0;
@@ -612,7 +566,6 @@ textarea::placeholder {
 .footer-container {
   background-color: #262626;
 }
-
 .footer {
   display: flex;
   margin: 0 auto;
@@ -621,7 +574,6 @@ textarea::placeholder {
   align-items: center;
   font-family: "Pretendard-Medium";
 }
-
 .contact-links {
   display: flex;
   justify-content: center;
@@ -629,12 +581,10 @@ textarea::placeholder {
   padding: 1rem;
   font-size: 2rem;
 }
-
 .contact-link {
   color: white;
   transition: color 250ms ease-in;
 }
-
 .search-bar {
   position: relative;
   width: 204px;
@@ -648,16 +598,13 @@ textarea::placeholder {
   left: 80%;
   top: 25%;
 }
-
 .contact a {
   color: #ffffff;
 }
-
 .contact-container {
   margin: 2rem auto 0;
   border-top: 1px solid #ffffff;
 }
-
 .contact-box {
   display: flex;
   justify-content: center;
@@ -665,12 +612,10 @@ textarea::placeholder {
   gap: 4rem;
   padding: 3rem;
 }
-
 .tel-box a {
   margin-right: 3rem;
   color: #ffffff;
 }
-
 .links-box li {
   display: inline-block;
   margin: 0 0.5rem 0;
@@ -690,14 +635,19 @@ textarea::placeholder {
   form {
     flex-wrap: wrap;
   }
+  .section-banner .container {
+    margin: 1rem 1rem 5.6rem;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .header-menu {
     gap: 0.5rem;
   }
-
-  banner-logo #contact {
+  #service {
+    display: none;
+  }
+  #contact {
     display: none;
   }
   .header-menu-item {
@@ -710,27 +660,22 @@ textarea::placeholder {
   .banner-title h1 {
     font-size: 2rem;
   }
-
-  .banner-logo {
-    width: 230px;
+  .about-us-logo {
+    width: 128px;
     height: auto;
   }
-
   .banner-subtitle {
     margin-top: 1rem;
     font-size: 1rem;
   }
-
   .banner-img {
     width: 400px;
     height: auto;
   }
-
   .card {
     width: 208px;
     height: 306px;
   }
-
   .card img {
     width: 192px;
     height: auto;
@@ -744,73 +689,72 @@ textarea::placeholder {
     font-size: 1.2rem;
     margin: 0 0 2.5rem 1rem;
   }
-
-  .banner-description {
-    font-size: 1.25rem;
-    line-height: 40px;
+  .about-us-description {
+    font-size: 0.8rem;
   }
-
+  .section2-h2-box {
+    width: 200px;
+    margin: 0 auto;
+  }
   .section-2 h2 {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
-
   .section-2 p {
-    font-size: 1.25rem;
+    font-size: 0.75rem;
   }
-
   .characters-image img {
     width: 30%;
   }
-
   .slide-photo img {
     width: 95%;
     height: auto;
   }
-  .section-3 h2 {
-    width: fit-content;
-    font-size: 0.75rem;
-    padding: 1rem 0;
+  .word-box-2 {
+    display: none;
+  }
+  .word-box-3 {
+    display: none;
   }
   .section-4 h3 {
     font-size: 1.5rem;
   }
-
   .tags button {
     padding: 8px;
     font-size: 1rem;
   }
-
   .section-5 .tags {
     gap: 1rem;
   }
-
   .section5-img {
     margin: 6rem auto;
   }
   .bubble {
-    top: -20%;
-    left: 35%;
-    width: 30%;
+    left: 40%;
+    width: 128px;
+    height: auto;
   }
-
+  .puppy {
+    width: 228px;
+    height: auto;
+  }
   .contact-box {
     flex-direction: column;
   }
-
   .tel-box a {
     margin-right: unset;
     font-size: 1.5rem;
   }
-
-  .word-animation-box {
-    overflow-x: hidden;
+  form {
+    flex-wrap: warp;
+  }
+  form div {
+    margin: 0 0.5rem;
   }
 
   .footer-logo {
     width: 96px;
     height: auto;
   }
-
   .form-box {
     width: 100%;
     display: flex;
@@ -824,7 +768,6 @@ textarea::placeholder {
     flex-direction: column;
     padding: 8px 24px;
   }
-
   .header-logo-img {
     width: 200px;
     height: auto;
@@ -835,66 +778,50 @@ textarea::placeholder {
     gap: 0.5rem;
     margin: 1rem 1rem;
   }
-
   .header-menu li {
     width: 100%;
     text-align: center;
   }
-
   .navbar-toggleBtn {
     display: block;
   }
-
   .header-menu.open {
     display: flex;
   }
-
+  .word-box-2 {
+    display: none;
+  }
+  .word-box-3 {
+    display: none;
+  }
   .section-banner .container {
     margin: 1rem;
     flex-direction: column-reverse;
     align-items: start;
   }
-  .section2-h2-box {
-    width: 200px;
-    margin: 0 auto;
-  }
-  .section-2 h2 {
-    font-size: 1.5rem;
-  }
-
-  .section-2 p {
-    font-size: 0.75rem;
-  }
-
   .banner-title h1 {
     font-size: 1.5rem;
     line-height: 1.5;
   }
-
   .banner-img {
     margin-bottom: 1rem;
     width: 100%;
   }
-
-  .banner-logo {
-    width: 128px;
-    height: auto;
+  .banner-img {
+    margin-bottom: 1rem;
+    width: 100%;
   }
-
   .banner-subtitle {
     margin-top: 1rem;
     font-size: 1rem;
   }
-
-  .banner-logo.logo-image {
+  .about-us-logo.logo-image {
     width: 230px;
     height: auto;
   }
-
   form {
     flex-direction: column;
   }
-
   form label {
     color: #7e7e7e;
   }
@@ -902,43 +829,42 @@ textarea::placeholder {
     width: 152px;
     height: 40px;
   }
-
   form div {
     margin: 0.5rem 0.5rem;
   }
-
   .form-box-one {
     margin: 1rem auto;
   }
-
   .form-box-two {
     display: flex;
     justify-content: space-between;
   }
-
   .form-box-two .date {
     width: 152px;
     height: 40px;
   }
+  .bubble {
+    top: -25%;
+    left: 40%;
+    width: 96px;
+    height: auto;
+  }
   .puppy {
-    width: 35%;
+    width: 96px;
+    height: auto;
   }
   .footer {
     flex-direction: column;
   }
-
   .footer-logo {
     margin-bottom: 1rem;
   }
-
   .contact-link {
     font-size: 1rem;
   }
-
   .links-box a {
     font-size: 0.75rem;
   }
-
   .search-bar {
     display: none;
   }
