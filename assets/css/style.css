@@ -581,7 +581,7 @@ textarea::placeholder {
   padding: 1rem;
   font-size: 2rem;
 }
-.contact-link {
+.contact-link i {
   color: white;
   transition: color 250ms ease-in;
 }
@@ -637,6 +637,9 @@ textarea::placeholder {
   }
   .section-banner .container {
     margin: 1rem 1rem 5.6rem;
+  }
+  .tags-btn {
+    color: black;
   }
 }
 
