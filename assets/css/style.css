@@ -2,34 +2,11 @@
 --- CSS INDEX ---
 1.Fonts CSS
 2.Common CSS
-3.Loader CSS
-4.Navbar CSS
-5.Banner CSS
-6.About Us CSS
-7.Counter CSS
-8.Services CSS
-9.Portfolio CSS
-10.My Clients CSS
-11.Working Steps CSS
-12.Pricing CSS
-13.Testimonial CSS
-14.Blog CSS
-15.Footer CSS
-16.Back To Top CSS
-17.All Over World CSS
-18.Cta CSS
-19.About Us Page CSS
-20.Services Page CSS
-21.Service Detail Page CSS
-22.Portfolio Page CSS
-23.Portfolio Detail Page CSS
-24.Faq Page CSS
-25.Pricing Page CSS
-26.Blog Grid Page CSS
-27.Blog List Page CSS
-28.Blog Detail Page CSS
-29.Contact Us Page CSS
-30.404 Error Page CSS
+3.Navbar CSS
+4.Banner CSS
+5.About Us CSS
+6.Services CSS
+7.Footer CSS
 ============*/
 
 /*==========Fonts CSS Start==========*/
@@ -130,7 +107,6 @@ h1 {
   border: 1px solid #262626;
   border-radius: 39px;
 }
-
 .section-btn:hover {
   width: 228px;
   height: 44px;
@@ -298,16 +274,16 @@ a:link {
 /* section3 */
 .section-3 div:first-child {
   background-color: black;
-  width: max-content;
   overflow-x: hidden;
 }
 .section-3 h2 {
   color: white;
   padding: 1.5rem 0;
   display: flex;
+  white-space: nowrap;
 }
 .word-animation {
-  animation: 50s infinite linear rotatingWord;
+  animation: 30s infinite linear rotatingWord;
 }
 @keyframes rotatingWord {
   from {
@@ -372,7 +348,7 @@ a:link {
 .location-icon i {
   position: absolute;
   top: 55%;
-  left: 1rem;
+  left: 0.4rem;
 }
 .tags-btn {
   width: 180px;
@@ -416,7 +392,7 @@ form {
 .form-box-two {
   display: flex;
 }
-#location {
+.form-location {
   width: 360px;
   height: 48px;
   margin: 0.5rem 0.5rem 0 0;
@@ -460,14 +436,13 @@ form select {
   margin: 0 auto;
 }
 .modal {
+  width: 432px;
+  padding: 1.3rem;
+  position: absolute;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 0.4rem;
-  width: 432px;
-  padding: 1.3rem;
-  min-height: 250px;
-  position: absolute;
   bottom: 20%;
   left: 50%;
   transform: translate(-50%, -20%);
@@ -485,6 +460,7 @@ form select {
   display: none;
 }
 .modal h3 {
+  font-weight: bold;
   margin: 3rem auto;
 }
 .modal-btn-box {
@@ -520,10 +496,10 @@ textarea::placeholder {
   margin: 0.7rem 0.5rem;
 }
 .icon {
-  background-color: #ff5a5aa8;
-  padding: 5px;
   width: 20px;
   height: 20px;
+  padding: 5px;
+  background-color: #ff5a5aa8;
 }
 .btn {
   width: 180px;
@@ -754,7 +730,6 @@ textarea::placeholder {
   form div {
     margin: 0 0.5rem;
   }
-
   .footer-logo {
     width: 96px;
     height: auto;
@@ -823,18 +798,30 @@ textarea::placeholder {
     width: 230px;
     height: auto;
   }
+  .modal {
+    width: 340px;
+    height: auto;
+  }
   form {
     flex-direction: column;
   }
   form label {
+    font-size: 0.9rem;
     color: #7e7e7e;
+  }
+  .modal-btn-box {
+    text-align: center;
+  }
+  form div {
+    margin: unset;
+  }
+  .form-location {
+    width: 320px;
+    height: 40px;
   }
   form select {
     width: 152px;
     height: 40px;
-  }
-  form div {
-    margin: 0.5rem 0.5rem;
   }
   .form-box-one {
     margin: 1rem auto;
@@ -846,6 +833,9 @@ textarea::placeholder {
   .form-box-two .date {
     width: 152px;
     height: 40px;
+  }
+  .btn-close {
+    margin-bottom: 0.5rem;
   }
   .bubble {
     top: -25%;
