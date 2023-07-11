@@ -395,7 +395,9 @@ form p {
 ::-webkit-input-placeholder {
   text-align: left;
 }
-
+form label {
+  color: #7e7e7e;
+}
 .form-location {
   width: 376px;
   height: 48px;
@@ -425,12 +427,13 @@ form select {
 }
 .section5-img {
   max-width: 1200px;
-  margin: 3rem auto;
+  margin: 6rem auto 3rem;
   position: relative;
   text-align: center;
 }
 .bubble {
   position: absolute;
+  top: -7%;
   left: 45%;
 }
 
@@ -748,6 +751,7 @@ textarea::placeholder {
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: #7e7e7e;
   }
 }
 
