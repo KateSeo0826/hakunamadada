@@ -81,7 +81,6 @@ textarea {
   text-align: center;
   outline: none;
 }
-
 p {
   font-size: 2rem;
 }
@@ -257,7 +256,7 @@ a:link {
 .section-2 h2 {
   font-family: "Gilroy-Bold";
   font-size: 3rem;
-  margin: 3rem auto;
+  margin: 7rem auto;
 }
 .characters-image {
   margin-bottom: 2rem;
@@ -365,7 +364,6 @@ a:link {
 }
 .service-button label span {
   text-align: center;
-  padding: 3px 0;
   display: block;
 }
 .service-button label input {
@@ -490,7 +488,6 @@ form select {
   top: -7%;
   left: 45%;
 }
-
 /* Modal Start */
 .modal-container {
   position: relative;
@@ -552,7 +549,6 @@ textarea {
 input::placeholder {
   padding: 1rem;
 }
-
 textarea::placeholder {
   padding: 0 1rem;
 }
@@ -691,7 +687,6 @@ textarea::placeholder {
   .header-menu {
     gap: 0.5rem;
   }
-
   .header-menu-item {
     display: block;
     padding: 8px 5px;

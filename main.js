@@ -1,3 +1,21 @@
+//date
+let d = new Date();
+let c_year = d.getFullYear();
+console.log(c_year)
+let c_month = d.getMonth() + 1;
+
+if (c_month < 10) {
+    c_month = '0' + c_month;
+}
+let c_date = d.getDate();
+if (c_date < 10) {
+    c_date = '0' + c_date;
+}
+
+let c_day = c_year + "-" + c_month + "-" + c_date;
+
+console.log(c_day)
+document.getElementById("date").value = c_day;
 
 // slide
 const slider = document.getElementsByClassName('slider')
@@ -24,7 +42,6 @@ for (const s of slider) {
     s.addEventListener('mousemove', e => {
         if (!isMouseDown) return
         e.preventDefault()
-
         s.scrollLeft = scrollLeft - (e.pageX - initialPageX)
     })
 }
@@ -46,7 +63,6 @@ navbarMenu.addEventListener('click', () => {
 
 
 //Modal
-
 const modal = document.querySelector('.modal')
 const overlay = document.querySelector(".overlay")
 const openModalBtn = document.querySelector(".btn-open")
@@ -77,4 +93,3 @@ document.addEventListener('keydown', (e) => {
 })
 
 
-//date 
