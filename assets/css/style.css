@@ -108,6 +108,7 @@ h1 {
   height: 44px;
   background-color: #262626;
   color: #ffffff;
+  cursor: pointer;
 }
 
 /*==========Common CSS End==========*/
@@ -377,7 +378,7 @@ a:link {
 /* This will declare how a selected input will look giving generic properties */
 .service-button input:checked + span {
   color: #ffffff;
-  text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
+  text-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
 }
 .service-button input:hover + span {
   cursor: pointer;
@@ -407,7 +408,7 @@ This following statements selects each category individually that contains an in
   background-color: #ac9bd1;
 }
 .ballon input:checked + span {
-  background-color: #dae4a3;
+  background-color: #cbffae;
 }
 .magic input:checked + span {
   background-color: #f71bc0;
