@@ -510,9 +510,6 @@ form select {
   box-shadow: 5px 5px 20px #4d4d4d26;
   border-radius: 24px;
 }
-.modal input {
-  text-align: center;
-}
 .modal p {
   font-size: 1rem;
 }
@@ -532,14 +529,10 @@ form select {
 .modal input,
 textarea {
   width: 100%;
-  padding: 0.7rem 1rem;
+  padding: 0.7rem 2rem;
   border: 1px solid #ddd;
   border-radius: 16px;
   font-size: 0.9em;
-}
-.call,
-.text {
-  text-align: center;
 }
 .modal textarea {
   height: 140px;
@@ -547,12 +540,6 @@ textarea {
 .input-icons {
   width: 100%;
   margin: auto 0;
-}
-input::placeholder {
-  padding: 1rem;
-}
-textarea::placeholder {
-  padding: 0 1rem;
 }
 .input-icons i {
   position: absolute;
