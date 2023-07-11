@@ -47,8 +47,9 @@ else{
         $altBody = "Name";
         $addAddress = "kateseo@adsologist.com"; 
         $responseMessage = '
-        <body style="z-index:2; font-family: Arial, Helvetica, sans-serif;">
-        <div style="width: 432px; height: 600px; margin: 0 auto; border-radius: 1.5rem; box-shadow: 5px 5px 20px #4D4D4D26; z-index:1;" class="alert alert-success" role="alert"><i class="fa-solid fa-circle-check"></i>
+        <body style="z-index:2; font-family: Arial, Helvetica, sans-serif;background-color:#FAF9F6;backdrop-filter: blur(20px);
+        margin: 7rem;">
+        <div style="width: 432px; height: 600px; margin: 0 auto; background-color:#FFFFFF; border-radius: 1.5rem; box-shadow: 5px 5px 20px #4D4D4D26; z-index:1;" class="alert alert-success" role="alert"><i class="fa-solid fa-circle-check"></i>
         <div style="padding: 3.5rem 1.5rem">
         <h2 style="text-align: center; font-size: 1.5rem;">Completed!</h2>
         <p style="color:# 7E7E7E; margin-top: 2.5rem;">Our agent will contact you within 2-3 business days.</p>

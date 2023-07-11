@@ -78,6 +78,7 @@ button,
 textarea {
   width: 100%;
   font-family: "Gilroy-Regular";
+  text-align: center;
   outline: none;
 }
 
@@ -717,6 +718,7 @@ textarea::placeholder {
 
   .section-5 .tags {
     gap: 1rem;
+    padding: 8px;
   }
   .section5-img {
     margin: 6rem auto;
@@ -781,7 +783,6 @@ textarea::placeholder {
     width: 100%;
     text-align: center;
   }
-
   .navbar-toggleBtn {
     display: block;
   }
@@ -796,7 +797,12 @@ textarea::placeholder {
     margin: 3rem auto 4.5rem;
   }
   .about-us-description {
-    line-height: 1.5rem;
+    font-size: 0.9rem;
+    line-height: 24px;
+  }
+  .about-us-logo {
+    width: 128px;
+    height: auto;
   }
   .word-box-2 {
     display: none;
