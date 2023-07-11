@@ -350,7 +350,7 @@ a:link {
 .service-button {
   float: left;
   margin: 3px;
-  background-color: #104068;
+  background-color: #a8a8a8;
   border: 1px solid #fff;
   border-radius: 20px;
   overflow: hidden;
@@ -368,19 +368,19 @@ a:link {
 .service-button label input {
   position: absolute;
   display: none;
-  color: #fff !important;
+  color: #242424 !important;
 }
 /* selects all of the text within the input element and changes the color of the text */
 .service-button label input + span {
-  color: #fff;
+  color: #242424;
 }
 /* This will declare how a selected input will look giving generic properties */
 .service-button input:checked + span {
   color: #ffffff;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
 }
-.service-button input:hover {
-  color: white;
+.service-button input:hover + span {
+  cursor: pointer;
 }
 /*
 This following statements selects each category individually that contains an input element that is a checkbox and is checked (or selected) and chabges the background color of the span element.
@@ -413,7 +413,7 @@ This following statements selects each category individually that contains an in
   background-color: #f71bc0;
 }
 .photo input:checked + span {
-  background-color: #1bb8f7;
+  background-color: #572dee;
 }
 .ar input:checked + span {
   background-color: #d9d65d;
@@ -474,7 +474,7 @@ form select {
   width: 180px;
   height: 48px;
   margin: 0.5rem 0.5rem;
-  border-radius: 24px;
+  border-radius: 20px;
   border: none;
   background-color: #f2f2f2;
   color: #7e7e7e;
@@ -519,7 +519,7 @@ form select {
 .hidden {
   display: none;
 }
-modal input1..modal h3 {
+.modal h3 {
   font-weight: bold;
   margin: 3rem auto;
 }
