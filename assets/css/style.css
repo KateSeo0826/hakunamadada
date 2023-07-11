@@ -387,28 +387,28 @@ a:link {
 This following statements selects each category individually that contains an input element that is a checkbox and is checked (or selected) and chabges the background color of the span element.
 */
 .fire input:checked + span {
-  background-color: #f75a1b;
+  background-color: #ef304a;
 }
 .mascot input:checked + span {
-  background-color: #1bb8f7;
+  background-color: #1c975a;
 }
 .clown input:checked + span {
-  background-color: #d9d65d;
+  background-color: #215cd1;
 }
 .neon input:checked + span {
-  background-color: #82d44e;
+  background-color: #e29849;
 }
 .handcraft input:checked + span {
-  background-color: #f3a4cf;
+  background-color: #192772;
 }
 .cotton input:checked + span {
-  background-color: #8c1b1b;
+  background-color: #f3a4cf;
 }
 .juggle input:checked + span {
-  background-color: #ac9bd1;
+  background-color: #1c3691;
 }
 .ballon input:checked + span {
-  background-color: #cbffae;
+  background-color: #73c2fb;
 }
 .magic input:checked + span {
   background-color: #f71bc0;
@@ -783,7 +783,6 @@ textarea {
     display: flex;
     flex-direction: column;
     align-items: center;
-    color: #7e7e7e;
   }
 }
 
@@ -883,6 +882,9 @@ textarea {
   }
   form {
     flex-direction: column;
+  }
+  form select {
+    padding: 0.5rem;
   }
   form label {
     font-size: 0.9rem;
