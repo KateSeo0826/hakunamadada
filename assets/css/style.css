@@ -484,6 +484,10 @@ textarea {
   border-radius: 16px;
   font-size: 0.9em;
 }
+.call,
+.text {
+  text-align: center;
+}
 .modal textarea {
   height: 140px;
 }
@@ -635,12 +639,7 @@ textarea::placeholder {
   .header-menu {
     gap: 0.5rem;
   }
-  #service {
-    display: none;
-  }
-  #contact {
-    display: none;
-  }
+
   .header-menu-item {
     display: block;
     padding: 8px 5px;
@@ -756,6 +755,12 @@ textarea::placeholder {
 }
 
 @media screen and (max-width: 598px) {
+  #service {
+    display: unset;
+  }
+  #contact {
+    display: unset;
+  }
   .header .container {
     flex-direction: column;
     padding: 8px 24px;
@@ -767,13 +772,14 @@ textarea::placeholder {
   .header-menu {
     display: none;
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 1rem;
     margin: 1rem 1rem;
   }
   .header-menu li {
     width: 100%;
     text-align: center;
   }
+
   .navbar-toggleBtn {
     display: block;
   }
