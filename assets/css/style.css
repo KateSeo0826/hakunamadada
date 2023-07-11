@@ -74,11 +74,10 @@ a:focus {
   outline: none;
 }
 input,
-button,
 textarea {
   width: 100%;
+  padding: 1.1rem;
   font-family: "Gilroy-Regular";
-  text-align: center;
   outline: none;
 }
 p {
@@ -380,6 +379,9 @@ a:link {
   color: #ffffff;
   text-shadow: 0 0 6px rgba(0, 0, 0, 0.8);
 }
+.service-button input:hover {
+  color: white;
+}
 /*
 This following statements selects each category individually that contains an input element that is a checkbox and is checked (or selected) and chabges the background color of the span element.
 */
@@ -457,11 +459,11 @@ form label {
   border-radius: 24px;
   border: none;
   background-color: #f2f2f2;
-  text-align: center;
 }
 form select {
   width: 180px;
   height: 48px;
+  padding: 1rem;
   margin: 0.5rem 0.5rem;
   border-radius: 24px;
   border: none;
