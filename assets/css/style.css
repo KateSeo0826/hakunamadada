@@ -157,11 +157,11 @@ a:link {
   left: 1rem;
   top: 1.9rem;
 }
-.section-banner {
+.banner-section {
   padding: 4.5rem 0 7rem;
   background-color: #ffe69f;
 }
-.section-banner .main-container {
+.banner-section .main-container {
   display: flex;
   justify-content: space-between;
   align-items: end;
@@ -178,7 +178,6 @@ a:link {
 .banner-img {
   overflow-x: hidden;
 }
-
 /* Login */
 .login-banner .main-container {
   background-color: #ffffff;
@@ -236,7 +235,6 @@ a:link {
 .login-box-two p a {
   color: hotpink;
 }
-
 /* About-Us */
 .main-about-us {
   background-color: #ffffff;
@@ -307,9 +305,8 @@ a:link {
 .about-us-btn {
   margin: 6rem auto;
 }
-
-/* section-2 */
-.section-2 {
+/* Character Images Section */
+.character-images-section {
   width: 100%;
   background-color: #cceace;
   display: flex;
@@ -317,7 +314,7 @@ a:link {
   justify-content: center;
   text-align: center;
 }
-.section-2 h2 {
+.character-images-section h2 {
   font-family: "Gilroy-Bold";
   font-size: 3rem;
   margin: 7rem auto;
@@ -329,16 +326,16 @@ a:link {
   display: flex;
   overflow-x: scroll;
 }
-.section2-btn {
+.character-box-btn {
   margin: 3rem auto 7.5rem;
 }
 
-/* section3 */
-.section-3 div:first-child {
+/* Word-animation-section */
+.word-animation-section div:first-child {
   background-color: black;
   overflow-x: hidden;
 }
-.section-3 h2 {
+.word-animation-box h2 {
   display: flex;
   white-space: nowrap;
   color: white;
@@ -355,38 +352,52 @@ a:link {
     transform: translateX(-25%);
   }
 }
-.section-4 {
+/* Events-cards-section */
+.events-cards-section {
   background-color: #cceace;
   width: 100%;
   height: auto;
   overflow: hidden;
 }
-.section-4 h3 {
+.events-cards-section h3 {
   font-family: "Gilroy-Bold";
   margin: 6rem 0 5rem;
   font-size: 2rem;
   text-align: center;
+}
+.event-card-wrapper {
+  max-width: 1280px;
+  display: flex;
+  margin: 0 auto;
+  gap: 0.5rem;
+  overflow-x: scroll;
+}
+.event-card {
+  width: 484px;
+  height: 550px;
+  background-color: #ffffff;
+  border-radius: 2.5rem;
 }
 .wave-img {
   margin: 2rem 0 1rem;
   width: 100%;
   height: auto;
 }
-.card img {
+.event-card img {
   margin: 1.5rem;
   border-radius: 2rem;
 }
-.card p {
+.event-card p {
   font-size: 20px;
   margin: 0 1.5rem;
 }
-.card h2 {
+.event-card h2 {
   font-size: 2rem;
   margin: 0 0 3.5rem 1.5rem;
 }
 
-/* section5 */
-.section-5 {
+/* Services Section Start */
+.services-section {
   max-width: 1200px;
   height: 100%;
   margin: 3rem auto;
@@ -400,7 +411,7 @@ a:link {
   gap: 1.5rem;
   justify-content: center;
 }
-.section5-btn {
+.services-section-btn {
   margin: 3rem auto;
 }
 .location-icon {
@@ -435,11 +446,9 @@ a:link {
   display: none;
   color: #242424 !important;
 }
-/* selects all of the text within the input element and changes the color of the text */
 .service-button label input + span {
   color: #242424;
 }
-/* This will declare how a selected input will look giving generic properties */
 .service-button input:checked + span {
   color: #ffffff;
   text-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
@@ -447,58 +456,43 @@ a:link {
 .service-button input:hover + span {
   cursor: pointer;
 }
-/*
-This following statements selects each category individually that contains an input element that is a checkbox and is checked (or selected) and chabges the background color of the span element.
-*/
 .fire input:checked + span {
-  background-color: #ef304a;
+  background-color: #f0606c;
 }
 .mascot input:checked + span {
-  background-color: #1c975a;
+  background-color: #d166a6;
 }
 .clown input:checked + span {
-  background-color: #215cd1;
+  background-color: #f38058;
 }
 .neon input:checked + span {
-  background-color: #e29849;
+  background-color: #6687c4;
 }
 .handcraft input:checked + span {
-  background-color: #192772;
+  background-color: #d166a6;
 }
 .cotton input:checked + span {
-  background-color: #f3a4cf;
+  background-color: #fff066;
 }
 .juggle input:checked + span {
-  background-color: #1c3691;
+  background-color: #6687c4;
 }
 .ballon input:checked + span {
-  background-color: #73c2fb;
+  background-color: #fff066;
 }
 .magic input:checked + span {
-  background-color: #f71bc0;
+  background-color: #6687c4;
 }
 .photo input:checked + span {
-  background-color: #572dee;
+  background-color: #f0606c;
 }
 .ar input:checked + span {
-  background-color: #d9d65d;
+  background-color: #fff066;
 }
 .face input:checked + span {
-  background-color: #82d44e;
+  background-color: #f38058;
 }
-.card-wrapper {
-  max-width: 1280px;
-  display: flex;
-  margin: 0 auto;
-  gap: 0.5rem;
-  overflow-x: scroll;
-}
-.card {
-  width: 484px;
-  height: 550px;
-  background-color: #ffffff;
-  border-radius: 2.5rem;
-}
+
 form {
   display: flex;
   justify-content: center;
@@ -544,7 +538,7 @@ form select {
   background-color: #f2f2f2;
   color: #7e7e7e;
 }
-.section5-img {
+.services-section-img {
   max-width: 1200px;
   margin: 6rem auto 3rem;
   position: relative;
@@ -735,7 +729,7 @@ textarea {
   .btn-container {
     max-width: 780px;
   }
-  .section-banner .main-container {
+  .banner-section .main-container {
     margin: 1rem 1rem 5.6rem;
   }
   .form-box {
@@ -769,7 +763,7 @@ textarea {
     display: block;
     padding: 8px 5px;
   }
-  .section-banner .main-container {
+  .banner-section .main-container {
     margin: 1rem 1rem 5.6rem;
   }
   .banner-title h1 {
@@ -787,34 +781,34 @@ textarea {
     width: 400px;
     height: auto;
   }
-  .card {
+  .event-card {
     width: 208px;
     height: 306px;
   }
-  .card img {
+  .event-card img {
     width: 192px;
     height: auto;
     margin: 0.5rem;
   }
-  .card p {
+  .event-card p {
     font-size: 1rem;
     margin: 0 1rem;
   }
-  .card h2 {
+  .event-card h2 {
     font-size: 1.2rem;
     margin: 0 0 2.5rem 1rem;
   }
   .about-us-description {
     font-size: 1.25rem;
   }
-  .section2-h2-box {
+  .character-h2-box {
     width: 200px;
     margin: 0 auto;
   }
-  .section-2 h2 {
+  .character-images-section h2 {
     font-size: 1.5rem;
   }
-  .section-2 p {
+  .character-images-section p {
     font-size: 0.75rem;
   }
   .characters-image img {
@@ -830,14 +824,14 @@ textarea {
   .word-box-3 {
     display: none;
   }
-  .section-4 h3 {
+  .events-cards-section h3 {
     font-size: 1.5rem;
   }
-  .section-5 .tags {
+  .services-section .tags {
     gap: 1rem;
     padding: 8px;
   }
-  .section5-img {
+  .services-section-img {
     margin: 6rem auto;
   }
   .bubble {
@@ -903,7 +897,7 @@ textarea {
   .section-banner {
     padding: 3rem 0 3rem;
   }
-  .section2-btn {
+  .character-box-btn {
     font-size: 1.5rem;
     margin: 3rem auto 4.5rem;
   }
@@ -926,7 +920,7 @@ textarea {
     flex-direction: column-reverse;
     align-items: start;
   }
-  .section-3 h2 {
+  .section-animation-box h2 {
     padding: 0.5rem 0;
     font-size: 0.75rem;
   }
@@ -956,7 +950,7 @@ textarea {
   .btn-container {
     margin: 4rem 0 3rem;
   }
-  .section5-btn {
+  .services-section-btn {
     font-size: 1.5rem;
   }
   .booking-modal {

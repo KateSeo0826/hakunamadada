@@ -14,7 +14,6 @@ if (c_date < 10) {
 
 let c_day = c_year + "-" + c_month + "-" + c_date;
 
-console.log(c_day)
 document.getElementById("date").value = c_day;
 
 /* Toggle Button*/
