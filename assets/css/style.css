@@ -90,7 +90,7 @@ h1 {
   font-size: 3rem;
   font-weight: bold;
 }
-.container {
+.main-container {
   max-width: 1200px;
   margin: auto;
 }
@@ -118,7 +118,13 @@ h1 {
   padding: 1rem;
   border-bottom: 1px solid black;
 }
-.header .container {
+.login,
+.register {
+  background-color: #ffffff;
+  padding: 1rem;
+  border-bottom: 1px solid black;
+}
+.header .main-container {
   display: flex;
   margin: 0 auto;
   justify-content: space-between;
@@ -155,7 +161,7 @@ a:link {
   padding: 4.5rem 0 7rem;
   background-color: #ffe69f;
 }
-.section-banner .container {
+.section-banner .main-container {
   display: flex;
   justify-content: space-between;
   align-items: end;
@@ -173,12 +179,70 @@ a:link {
   overflow-x: hidden;
 }
 
+/* Login */
+.login-banner .main-container {
+  background-color: #ffffff;
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  margin: 3rem auto 7rem;
+}
+.login-box-one {
+  width: 500px;
+  height: auto;
+}
+.form-login {
+  display: flex;
+  flex-direction: column;
+}
+.form-login h1 {
+  margin: 0.5rem 0;
+}
+.form-login p {
+  margin: 0 0 2rem;
+}
+.form-login input {
+  margin: 0.5rem 0 0.5rem;
+}
+.form-login button {
+  width: 100%;
+  padding: 1.2rem;
+  margin: 0.5rem 0 2rem;
+  background-color: #262626;
+  color: #ffffff;
+  font-size: 1rem;
+}
+.line-box {
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.line-box::before,
+.line-box::after {
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid #000;
+}
+.line-box:not(:empty)::before {
+  margin-right: 0.25rem;
+}
+.line-box:not(:empty)::after {
+  margin-left: 0.25rem;
+}
+.login-box-two p {
+  margin: 2rem auto;
+  font-size: 1rem;
+}
+.login-box-two p a {
+  color: hotpink;
+}
+
 /* About-Us */
 .main-about-us {
   background-color: #ffffff;
   text-align: center;
 }
-.main-about-us .container {
+.main-about-us .main-container {
   flex: flex;
   margin: 0 auto;
   font-family: "Gilroy-Regular";
@@ -496,7 +560,7 @@ form select {
   position: relative;
   margin: 0 auto;
 }
-.modal {
+.booking-modal {
   width: 432px;
   padding: 1.3rem;
   position: absolute;
@@ -511,23 +575,23 @@ form select {
   box-shadow: 5px 5px 20px #4d4d4d26;
   border-radius: 24px;
 }
-.modal p {
+.booking-modal p {
   font-size: 1rem;
 }
-.modal {
+.booking-modal {
   z-index: 2;
 }
 .hidden {
   display: none;
 }
-.modal h3 {
+.booking-modal h3 {
   font-weight: bold;
   margin: 3rem auto;
 }
 .modal-btn-box {
   margin: 1rem auto;
 }
-.modal input,
+.booking-modal input,
 textarea {
   width: 100%;
   padding: 0.7rem 2rem;
@@ -535,7 +599,7 @@ textarea {
   border-radius: 16px;
   font-size: 0.9em;
 }
-.modal textarea {
+.booking-modal textarea {
   height: 140px;
 }
 .input-icons {
@@ -668,8 +732,32 @@ textarea {
   form {
     flex-wrap: wrap;
   }
-  .section-banner .container {
+  .btn-container {
+    max-width: 780px;
+  }
+  .section-banner .main-container {
     margin: 1rem 1rem 5.6rem;
+  }
+  .form-box {
+    display: flex;
+    align-items: center;
+  }
+  .event-type-select,
+  .date {
+    width: 350px;
+  }
+  .form-location {
+    width: 260px;
+  }
+  .form-box-one {
+    margin: 0 1.5rem;
+  }
+  .adult-num-select {
+    width: 180px;
+  }
+  .form-box-one label,
+  .form-box-two label {
+    margin-left: 11px;
   }
 }
 
@@ -681,7 +769,7 @@ textarea {
     display: block;
     padding: 8px 5px;
   }
-  .section-banner .container {
+  .section-banner .main-container {
     margin: 1rem 1rem 5.6rem;
   }
   .banner-title h1 {
@@ -769,20 +857,15 @@ textarea {
     font-size: 1.5rem;
   }
   form {
+    justify-content: space-around;
     flex-wrap: warp;
-  }
-  form div {
-    margin: 0 0.5rem;
   }
   .footer-logo {
     width: 96px;
     height: auto;
   }
-  .form-box {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .form-box-one {
+    margin: 0;
   }
 }
 
@@ -793,7 +876,7 @@ textarea {
   #contact {
     display: unset;
   }
-  .header .container {
+  .header .main-container {
     flex-direction: column;
     padding: 8px 24px;
   }
@@ -838,7 +921,7 @@ textarea {
   .word-box-3 {
     display: none;
   }
-  .section-banner .container {
+  .section-banner .main-container {
     margin: 1rem;
     flex-direction: column-reverse;
     align-items: start;
@@ -876,12 +959,9 @@ textarea {
   .section5-btn {
     font-size: 1.5rem;
   }
-  .modal {
+  .booking-modal {
     width: 320px;
     height: auto;
-  }
-  form {
-    flex-direction: column;
   }
   form select {
     padding: 0.5rem;
@@ -893,21 +973,23 @@ textarea {
   .modal-btn-box {
     text-align: center;
   }
-  form div {
-    margin: unset;
-  }
   .form-location {
     width: 300px;
     height: 38px;
   }
-  form select {
+  .event-type-select {
     width: 140px;
     height: 38px;
   }
-  .form-box-two {
-    display: flex;
-    justify-content: space-between;
+  .form-box-one {
+    margin-top: 0.5rem;
   }
+  .form-box-two {
+    margin-top: 0.5rem;
+    display: flex;
+  }
+  .adult-num-select,
+  .kid-num-select,
   .form-box-two .date {
     width: 140px;
     height: 38px;

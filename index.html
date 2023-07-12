@@ -28,7 +28,7 @@
 
     <!-- Main Style CSS  -->
     <link rel="stylesheet" href="assets/css/style.css" />
-    <script src="./main.js" defer></script>
+    <script src="./login.js" defer></script>
     <!-- Bootstrap -->
     <!-- <link
       rel="stylesheet"
@@ -58,11 +58,11 @@
     <!-- Header start-->
     <header class="header">
       <!--Navbar Start  -->
-      <div class="container">
+      <div class="main-container">
         <!-- Site Logo Start -->
         <div class="header-logo">
-          <img class="header-logo-img" src="assets/images/logo/png/logo_horizontal_black.png" alt="logo"
-          />
+          <a href="/"><img class="header-logo-img" src="assets/images/logo/png/logo_horizontal_black.png" alt="logo"
+          /></a>
         </div>
         <!-- Site Logo End -->
         <nav class="header-nav">
@@ -89,7 +89,7 @@
               <i class="header-menu-item fa-regular fa-bell"></i>
             </li>
             <li>
-              <i class="header-menu-item fa-regular fa-user"></i>
+              <a title="login" href="login.html"><i class="header-menu-item fa-regular fa-user"></i></a>
             </li>
           </ul>
           <a href="#" class="navbar-toggleBtn">
@@ -103,7 +103,7 @@
 
     <!-- Main Banner Start -->
     <section class="section-banner">
-      <div class="container">
+      <div class="main-container">
         <div class="banner-title">
           <h1>
             HAKUNA MADADA <br />COMPLETE YOUR <br />SPECIAL
@@ -120,7 +120,7 @@
 
 <!-- About-Us End-->
     <section class="main-about-us">
-      <div class="container">
+      <div class="main-container">
         <img
           class="about-us-logo logo-img"
           src="assets/images/logo/png/logo_horizontal.png"
@@ -310,14 +310,14 @@
         </div>
         <div class="form-box-one">
           <label for="number">Number of people</label><br />
-          <select class="adult-num" id="adult">
+          <select class="adult-num-select" id="adult">
             <option value="1">1 Adults</option>
             <option value="2">2 Adults</option>
             <option value="3">3 Adults</option>
             <option value="4">4 Adults</option>
             <option value="5">5 Adults</option>
           </select>
-          <select id="kids">
+          <select class="kid-num-select" id="kids">
             <option value="1">1 Kids</option>
             <option value="2">2 Kids</option>
             <option value="3">3 Kids</option>
@@ -333,7 +333,7 @@
         <div class="form-box-two">
           <div>
             <label for="type">Type</label><br />
-            <select id="type">
+            <select class="event-type-select" id="type-event">
               <option value="birthday">Kids Birthday</option>
             </select>
           </div>
@@ -353,7 +353,7 @@
 
   <!-- Contact Form Modal Start -->
     <section class="modal-container">
-      <form class="modal hidden" method="post" name="ContactForm" id="ContactForm" action="send-email.php">
+      <form class="booking-modal hidden" method="post" name="ContactForm" id="ContactForm" action="send-email.php">
         <h3>Booking contact details</h3>
         <p>Contact me via...</p>
         <div class="input-box-one">
@@ -427,7 +427,7 @@
 
   <!-- Footer Start -->
     <footer id="contactus" class="footer-container">
-      <div class="footer container">
+      <div class="footer main-container">
         <div class="icons">
           <ul class="contact-links">
             <li>
@@ -457,7 +457,7 @@
           <img src="assets/images/icon/png/search_white.png" class="search" />
         </div>
       </div>
-      <div class="contact-container container">
+      <div class="contact-container main-container">
         <div class="contact-box">
           <div class="tel-box">
             <a class="contact-link tel" href="tel:+14372863387"
@@ -466,10 +466,10 @@
           </div>
           <div class="links-box">
             <li>
-              <a class="contact-link" href="#service"> SERVICE</a>
+              <a class="contact-link" href="#services"> SERVICE</a>
             </li>
             <li>
-              <a class="contact-link" href="#contact">CONTACT US</a>
+              <a class="contact-link" href="#contactus">CONTACT US</a>
             </li>
           </div>
         </div>
