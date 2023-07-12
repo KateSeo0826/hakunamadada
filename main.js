@@ -17,6 +17,18 @@ let c_day = c_year + "-" + c_month + "-" + c_date;
 console.log(c_day)
 document.getElementById("date").value = c_day;
 
+/* Toggle Button*/
+const navbarMenu = document.querySelector('.header-menu')
+const toggleBtn = document.querySelector('.navbar-toggleBtn')
+
+toggleBtn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('open')
+})
+
+//Navbar menu click 
+navbarMenu.addEventListener('click', () => {
+    navbarMenu.classList.remove('open')
+})
 // slide
 const slider = document.getElementsByClassName('slider')
 
@@ -47,19 +59,7 @@ for (const s of slider) {
 }
 
 
-/* Toggle Button*/
-const navbarMenu = document.querySelector('.header-menu')
-const toggleBtn = document.querySelector('.navbar-toggleBtn')
 
-toggleBtn.addEventListener('click', () => {
-    navbarMenu.classList.toggle('open')
-})
-
-//Navbar menu click 
-
-navbarMenu.addEventListener('click', () => {
-    navbarMenu.classList.remove('open')
-})
 
 
 //Modal
