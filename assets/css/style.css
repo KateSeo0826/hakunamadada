@@ -11,6 +11,18 @@
 
 /*==========Fonts CSS Start==========*/
 @font-face {
+  font-family: "Gilroy-Heavy";
+  src: local("Gilroy-Heavy"), url("../fonts/Gilroy-Heavy.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Gilroy-Bold";
+  src: local("Gilroy-Bold"), url("../fonts/Gilroy-Bold.woff") format("woff");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
   font-family: "Gilroy-Regular";
   src: local("Gilroy-Regular"),
     url("../fonts/Gilroy-Regular.woff") format("woff");
@@ -18,8 +30,8 @@
   font-weight: normal;
 }
 @font-face {
-  font-family: "Gilroy-Bold";
-  src: local("Gilroy-Bold"), url("../fonts/Gilroy-Bold.woff") format("woff");
+  font-family: "Gilroy-Light";
+  src: local("Gilroy-Light"), url("../fonts/Gilroy-Light.woff") format("woff");
   font-style: normal;
   font-weight: normal;
 }
@@ -161,7 +173,8 @@ a:link {
   padding: 4.5rem 0 7rem;
   background-color: #ffe69f;
 }
-.banner-section .main-container {
+.banner-section .main-container,
+.login-section .main-container {
   display: flex;
   justify-content: space-between;
   align-items: end;
@@ -179,61 +192,89 @@ a:link {
   overflow-x: hidden;
 }
 /* Login */
-.login-banner .main-container {
+.login-section .main-container {
   background-color: #ffffff;
-  display: flex;
-  justify-content: space-between;
-  align-items: end;
-  margin: 3rem auto 7rem;
 }
-.login-box-one {
-  width: 500px;
+.login-box-one,
+.find-userinfo-box {
+  width: 486px;
   height: auto;
+  margin: 2rem auto;
 }
 .form-login {
   display: flex;
   flex-direction: column;
 }
+.form-login-icon {
+  margin: 0.5rem 2.5rem 0.5rem 0;
+  font-size: 2.8rem;
+}
 .form-login h1 {
-  margin: 0.5rem 0;
+  margin: 0.5rem 0 1.6rem;
+  color: #1d1d1d;
+  font-size: 4rem;
+  font-family: "Gilroy-Bold";
 }
 .form-login p {
   margin: 0 0 2rem;
+  font-size: 2.25rem;
+  font-family: "Gilroy-Light";
 }
 .form-login input {
+  border: 1px solid #7e7e7e;
   margin: 0.5rem 0 0.5rem;
+  height: 64px;
 }
 .form-login button {
   width: 100%;
-  padding: 1.2rem;
-  margin: 0.5rem 0 2rem;
+  height: 64px;
+  margin: 1rem 0 2rem;
   background-color: #262626;
   color: #ffffff;
-  font-size: 1rem;
+  font-size: 1.25rem;
+  font-family: "Gilroy-Light";
+  letter-spacing: -0.4px;
+}
+.find-box {
+  display: flex;
+  justify-content: space-around;
+  margin: 0rem 0 3.25rem;
+  color: #262626;
+  letter-spacing: -0.32px;
+}
+.line-words {
+  margin-right: 1.7rem;
 }
 .line-box {
   display: flex;
   align-items: center;
   text-align: center;
+  font-size: 1rem;
+  color: #7e7e7e;
 }
 .line-box::before,
 .line-box::after {
   content: "";
   flex: 1;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #b7b7b7;
 }
 .line-box:not(:empty)::before {
-  margin-right: 0.25rem;
+  margin-right: 0.75rem;
 }
 .line-box:not(:empty)::after {
-  margin-left: 0.25rem;
+  margin-left: 0.75rem;
 }
 .login-box-two p {
+  color: #262626;
+  text-align: center;
   margin: 2rem auto;
   font-size: 1rem;
 }
 .login-box-two p a {
-  color: hotpink;
+  color: #de30ff;
+  font-family: "Gilroy-Heavy";
+  font-size: 1rem;
+  letter-spacing: -0.32px;
 }
 /* About-Us */
 .main-about-us {
