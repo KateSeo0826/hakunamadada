@@ -1,3 +1,65 @@
+const formEl = document.querySelector('.form');
+formEl.addEventListener('submit', (e) => {
+    e.preventDefault();
+
+    $("#bookingModal").modal("toggle");
+    const formEl2 = document.querySelector('.modalForm')
+    formEl2.addEventListener('submit', (e) => {
+        e.preventDefault();
+
+        const formData = new FormData(formEl);
+        const data = {}
+
+        //Loop through all form elements from the first form
+        for (let [key, value] of formData) {
+            //Check if the key already exists in the data object
+            if (data.hasOwnProperty(key)) {
+                //If the key exists, create an array and push the value
+                if (!Array.isArray(data[key])) {
+                    data[key] = [data[key]];
+                }
+                data[key].push(value)
+            } else {
+                //If the key doesn't exist, assign the value directly
+                data[key] = value;
+
+            }
+        }
+
+        const formData2 = new FormData(formEl2);
+        const data2 = Object.fromEntries(formData2)
+
+        //Merge the two form data objects
+        const data3 = { ...data, ...data2 };
+        console.log(data3)
+
+        $.ajax({
+            url: 'send-email.php',
+            dataType: 'json',
+            type: 'POST',
+            data: data3,
+            success: function (data) {
+                console.log(res['status']);
+                $('#bookingModal').html(res['status'])
+            }
+        })
+    })
+})
+
+var checkboxes = document.querySelectorAll(".form-check-input");
+for (let i = 0; i < checkboxes.length; i++) {
+    checkboxes[i].addEventListener("change", function () {
+        var checked = document.querySelectorAll(".form-check-input:checked").length;
+        for (let j = 0; j < checkboxes.length; j++) {
+            if (checked > 0) {
+                checkboxes[j].required = false;
+            } else {
+                checkboxes[j].required = true;
+            }
+        }
+    })
+}
+
 //date
 let d = new Date();
 let c_year = d.getFullYear();
@@ -61,34 +123,5 @@ for (const s of slider) {
 
 
 
-//Modal
-const modal = document.querySelector('.booking-modal')
-const overlay = document.querySelector(".overlay")
-const openModalBtn = document.querySelector(".btn-open")
-const closeModalBtn = document.querySelector(".btn-close")
-
-const openModal = () => {
-    modal.classList.remove('hidden')
-    overlay.classList.remove('hidden')
-}
-
-openModalBtn.addEventListener('click', openModal)
-
-const closeModal = () => {
-    modal.classList.add('hidden')
-    overlay.classList.add('hidden')
-}
-
-closeModalBtn.addEventListener('click', closeModal)
-
-overlay.addEventListener("click", closeModal);
-
-document.addEventListener('keydown')
-
-document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
-        modalClose()
-    }
-})
 
 

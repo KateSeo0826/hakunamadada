@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Website for Hakunamadada" />
     <meta name="author" content="hakunamadada" />
-    
+
     <!-- OG (Open Graph Data) -->
     <meta property="og:title" content="hakunamadada" />
     <meta property="og:type" content="website" />
@@ -25,23 +25,20 @@
       href="assets/images/logo_basic.ico"
       type="image/x-icon"
     />
-
+    <script
+      type="text/javascript"
+      src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"
+    ></script>
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
     <!-- Main Style CSS  -->
     <link rel="stylesheet" href="assets/css/style.css" />
     <script src="./main.js" defer></script>
-    <!-- Bootstrap -->
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
-      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
-      crossorigin="anonymous"
-    />
-
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
-      integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
-      crossorigin="anonymous"
-    ></script> -->
 
     <!--Font Awesome Icon CSS-->
     <link
@@ -56,32 +53,33 @@
 
   <body>
     <!-- Header start-->
-    <header class="header">
+    <header class="header main-header">
       <!--Navbar Start  -->
       <div class="main-container">
         <!-- Site Logo Start -->
         <div class="header-logo">
-          <a href="/"><img class="header-logo-img" src="assets/images/logo/png/logo_horizontal_black.png" alt="logo"
+          <a href="/"
+            ><img
+              class="header-logo-img"
+              src="assets/images/logo/png/logo_horizontal_black.png"
+              alt="logo"
           /></a>
         </div>
         <!-- Site Logo End -->
         <nav class="header-nav">
           <ul class="header-menu">
             <li>
-              <a class="header-menu-item" href="tel:+14372863387"
+              <a id="phoneno" class="header-menu-item" href="tel:+14372863387"
                 >+1 437 286 3387</a
               >
             </li>
-            <li class="search-bar" style="border-color: black">
-              <img src="assets/images/icon/png/search_black.png" class="search" />
-            </li>
             <li>
-              <a id="service" class="header-menu-item" href="#services"
+              <a id="service" class="header-menu-item" href="services.html"
                 >SERVICE</a
               >
             </li>
             <li>
-              <a id="contact" class="header-menu-item" href="#contactus"
+              <a id="contact" class="header-menu-item" href="contact.html"
                 >CONTACT US</a
               >
             </li>
@@ -89,7 +87,9 @@
               <i class="header-menu-item fa-regular fa-bell"></i>
             </li>
             <li>
-              <a title="login" href="login.html"><i class="header-menu-item fa-regular fa-user"></i></a>
+              <a title="login" href="login.html"
+                ><i class="header-menu-item fa-regular fa-user"></i
+              ></a>
             </li>
           </ul>
           <a href="#" class="navbar-toggleBtn">
@@ -117,8 +117,7 @@
     </section>
     <!-- Main Banner End -->
 
-
-<!-- About-Us End-->
+    <!-- About-Us End-->
     <section class="main-about-us">
       <div class="main-container">
         <img
@@ -133,60 +132,125 @@
         </p>
         <div class="about-us-gallery">
           <figure class="gallery-item gallery-item-1">
-            <img src="assets/images/gallery/photo01.png" class="gallery-img" alt="Image 1"/>
+            <img
+              src="assets/images/gallery/photo01.png"
+              class="gallery-img"
+              alt="Image 1"
+            />
           </figure>
           <figure class="gallery-item gallery-item-2">
-            <img src="assets/images/gallery/photo02.png" class="gallery-img" alt="Image 2"/>
+            <img
+              src="assets/images/gallery/photo02.png"
+              class="gallery-img"
+              alt="Image 2"
+            />
           </figure>
           <figure class="gallery-item gallery-item-3">
-            <img src="assets/images/gallery/photo03.png" class="gallery-img" alt="Image 3" />
+            <img
+              src="assets/images/gallery/photo03.png"
+              class="gallery-img"
+              alt="Image 3"
+            />
           </figure>
           <figure class="gallery-item gallery-item-4">
             <img
-              src="assets/images/gallery/photo04.png" class="gallery-img" alt="Image 4" />
+              src="assets/images/gallery/photo04.png"
+              class="gallery-img"
+              alt="Image 4"
+            />
           </figure>
           <figure class="gallery-item gallery-item-5">
-            <img src="assets/images/gallery/photo05.png" class="gallery-img" alt="Image 5" />
+            <img
+              src="assets/images/gallery/photo05.png"
+              class="gallery-img"
+              alt="Image 5"
+            />
           </figure>
           <figure class="gallery-item gallery-item-6">
-            <img src="assets/images/gallery/photo06.png" class="gallery-img" alt="Image 6" />
+            <img
+              src="assets/images/gallery/photo06.png"
+              class="gallery-img"
+              alt="Image 6"
+            />
           </figure>
           <figure class="gallery-item gallery-item-7">
-            <img src="assets/images/gallery/photo07.png" class="gallery-img" alt="Image 7"/>
+            <img
+              src="assets/images/gallery/photo07.png"
+              class="gallery-img"
+              alt="Image 7"
+            />
           </figure>
         </div>
-        <button class="section-btn about-us-btn">Book Now &gt</button>
+        <a href="#services">
+          <button class="section-btn about-us-btn">Book Now &gt</button>
+        </a>
       </div>
     </section>
     <!-- About-Us End -->
 
-<!-- Character Images Section Start -->
+    <!-- Character Images Section Start -->
     <section class="character-images-section">
       <h2 class="character-h2-box">Bring your dream in to your real life</h2>
       <div class="charactkers-image image-wrapper slider">
-        <img src="assets/images/characters/png/characters1.png" alt="character_img" />
-        <img src="assets/images/characters/png/characters2.png" alt="character_img" />
-        <img src="assets/images/characters/png/characters3.png" alt="character_img" />
-        <img src="assets/images/characters/png/characters4.png" alt="character_img" />
-        <img src="assets/images/characters/png/characters5.png" alt="character_img" />
-        <img src="assets/images/characters/png/characters6.png" alt="character_img" />
-        <img src="assets/images/characters/png/characters7.png" alt="character_img" />
-        <img src="assets/images/characters/png/characters8.png" alt="character_img" />
-        <img src="assets/images/characters/png/characters9.png" alt="character_img" />
-        <img src="assets/images/characters/png/characters10.png" alt="character_img" />
-        <img src="assets/images/characters/png/characters13.png" alt="character_img" />
+        <img
+          src="assets/images/characters/png/characters1.png"
+          alt="character_img"
+        />
+        <img
+          src="assets/images/characters/png/characters2.png"
+          alt="character_img"
+        />
+        <img
+          src="assets/images/characters/png/characters3.png"
+          alt="character_img"
+        />
+        <img
+          src="assets/images/characters/png/characters4.png"
+          alt="character_img"
+        />
+        <img
+          src="assets/images/characters/png/characters5.png"
+          alt="character_img"
+        />
+        <img
+          src="assets/images/characters/png/characters6.png"
+          alt="character_img"
+        />
+        <img
+          src="assets/images/characters/png/characters7.png"
+          alt="character_img"
+        />
+        <img
+          src="assets/images/characters/png/characters8.png"
+          alt="character_img"
+        />
+        <img
+          src="assets/images/characters/png/characters9.png"
+          alt="character_img"
+        />
+        <img
+          src="assets/images/characters/png/characters10.png"
+          alt="character_img"
+        />
+        <img
+          src="assets/images/characters/png/characters13.png"
+          alt="character_img"
+        />
       </div>
       <p>Puppet Show</p>
-      <button class="section-btn character-box-btn">See More &gt</button>
+      <a href="services.html">
+        <button class="section-btn character-box-btn">See More &gt</button>
+      </a>
     </section>
-<!-- Character Images Section End -->
+    <!-- Character Images Section End -->
 
-<!-- Word-animation-section Start-->
+    <!-- Word-animation-section Start-->
     <section class="word-animation-section">
       <div class="word-animation-box">
         <h2 class="word-animation">
-         #HAKUNA MADADA ~ #HAKUNA MADADA ~ #HAKUNA MADADA ~ #HAKUNA MADADA ~
-         #HAKUNA MADADA ~ #HAKUNA MADADA ~ #HAKUNA MADADA ~ #HAKUNA MADADA ~ #HAKUNA MADADA ~
+          #HAKUNA MADADA ~ #HAKUNA MADADA ~ #HAKUNA MADADA ~ #HAKUNA MADADA ~
+          #HAKUNA MADADA ~ #HAKUNA MADADA ~ #HAKUNA MADADA ~ #HAKUNA MADADA ~
+          #HAKUNA MADADA ~
         </h2>
       </div>
       <div class="slide-photo image-wrapper slider">
@@ -198,265 +262,439 @@
         <img src="assets/images/photo_slide/slide1.png" alt="slide_img" />
       </div>
     </section>
-<!-- Word-Animation-Section End -->
+    <!-- Word-Animation-Section End -->
 
-  <!-- Events Cards Section Start -->
+    <!-- Events Cards Section Start -->
     <section class="events-cards-section">
-      <img class="wave-img" src="assets/images/photo_card_02/line.png" alt="wave" />
+      <img
+        class="wave-img"
+        src="assets/images/photo_card_02/line.png"
+        alt="wave"
+      />
       <div class="event-card-wrapper slider">
         <div class="event-card">
           <img src="assets/images/photo_card_02/card1.png" alt="card" />
           <p>Capture the Moment</p>
           <h2>Photo Booth</h2>
-          <p>2023.07.01 ~ 08.01</p>
+          <p>2023.08.01 ~ 09.01</p>
         </div>
         <div class="event-card">
           <img src="assets/images/photo_card_02/card2.png" alt="card" />
           <p>Magical Colour Shows</p>
           <h2>Neon Bubble</h2>
-          <p>2023.07.01 ~ 08.01</p>
+          <p>2023.08.01 ~ 09.01</p>
         </div>
         <div class="event-card">
           <img src="assets/images/photo_card_02/card3.png" alt="card" />
           <p>Extreme Hot!</p>
           <h2>Fire Breathing</h2>
-          <p>2023.07.01 ~ 08.01</p>
+          <p>2023.08.01 ~ 09.01</p>
         </div>
         <div class="event-card">
           <img src="assets/images/photo_card_02/card4.png" alt="card" />
           <p>Beyond the Imagination</p>
           <h2>Fire Breathing</h2>
-          <p>2023.07.01 ~ 08.01</p>
+          <p>2023.08.01 ~ 09.01</p>
         </div>
       </div>
-      <h3>Check our EVENT PRICE</h3>
+      <a href="services.html">
+        <h3>Check our EVENT PRICE</h3>
+      </a>
     </section>
-  <!-- Events Cards Section End -->
+    <!-- Events Cards Section End -->
 
-  <!-- Services Section Start -->
-    <section class="services-section" id="services" >
-      <div class="btn-container tags">
-        <div class="service-button fire">
-          <label>
-            <input type="checkbox" value="fire-breathing"><span>Fire Breathing</span>
-          </label>
+    <!-- Services Section Start -->
+    <section class="services-section" id="services">
+      <form class="form" name="reservation" method="post">
+        <div class="btn-container services tags">
+          <div class="form-check service-button fire">
+            <label class="form-check-label" for="check1">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                name="services[]"
+                value="fire-breathing"
+                id="check1"
+                required
+              />
+              <span>Fire Breathing</span>
+            </label>
+          </div>
+          <div class="service-button mascot form-check">
+            <label class="form-check-label" for="check2">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                name="services[]"
+                id="check2"
+                value="mascot"
+                required
+              />
+              <span>Mascot</span>
+            </label>
+          </div>
+          <div class="service-button clown form-check">
+            <label class="form-check-label" for="check3">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                name="services[]"
+                id="check3"
+                value="clown"
+                required
+              />
+              <span>Clown</span>
+            </label>
+          </div>
+          <div class="service-button neon form-check">
+            <label class="form-check-label" for="check4">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                name="services[]"
+                value="neon-bubble"
+                id="check4"
+                required
+              />
+              <span>Neon Bubble</span>
+            </label>
+          </div>
+          <div class="service-button handcraft form-check">
+            <label class="form-check-label" for="check5">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                name="services[]"
+                value="handcraft"
+                id="check5"
+                required
+              />
+              <span>Handcraft</span>
+            </label>
+          </div>
+          <div class="service-button cotton form-check">
+            <label class="form-check-label" for="check6">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                name="services[]"
+                value="cotton-candy"
+                id="check6"
+                required
+              />
+              <span>Cotton Candy</span>
+            </label>
+          </div>
+          <div class="service-button juggle form-check">
+            <label class="form-check-label" for="check7">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                name="services[]"
+                value="juggle"
+                id="check7"
+                required
+              />
+              <span>Juggle</span>
+            </label>
+          </div>
+          <div class="service-button ballon form-check">
+            <label class="form-check-label" for="check8">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                name="services[]"
+                value="ballon-twisting"
+                id="check8"
+                required
+              />
+              <span>Ballon Twisting</span>
+            </label>
+          </div>
+          <div class="service-button magic form-check">
+            <label class="form-check-label" for="check9">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                name="services[]"
+                id="check9"
+                value="magic-show"
+                required
+              />
+              <span>Magic Show</span>
+            </label>
+          </div>
+          <div class="service-button photo form-check">
+            <label class="form-check-label" for="check10">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                name="services[]"
+                id="check10"
+                value="photo-booth"
+                required
+              />
+              <span>Photo Booth</span>
+            </label>
+          </div>
+          <div class="service-button ar form-check">
+            <label class="form-check-label" for="check11">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                name="services[]"
+                id="check11"
+                value="ar-invitation"
+                required
+              />
+              <span>AR Invitation</span>
+            </label>
+          </div>
+          <div class="service-button face form-check">
+            <label class="form-check-label" for="check12">
+              <input
+                type="checkbox"
+                class="form-check-input"
+                name="services[]"
+                id="check12"
+                value="face-painting"
+                required
+              />
+              <span>Face Painting</span>
+            </label>
+          </div>
         </div>
-        <div class="service-button mascot">
-          <label>
-            <input type="checkbox" value="mascot"><span>Mascot</span>
-          </label>
-        </div>
-        <div class="service-button clown">
-          <label>
-            <input type="checkbox" value="clown"><span>Clown</span>
-          </label>
-        </div>
-        <div class="service-button neon">
-          <label>
-            <input type="checkbox" value="neon-bubble"><span>Neon Bubble</span>
-          </label>
-        </div>
-        <div class="service-button handcraft">
-          <label>
-            <input type="checkbox" value="handcraft"><span>Handcraft</span>
-          </label>
-        </div>
-        <div class="service-button cotton">
-          <label>
-            <input type="checkbox" value="cotton-candy"><span>Cotton Candy</span>
-          </label>
-        </div>
-        <div class="service-button juggle">
-          <label>
-            <input type="checkbox" value="juggle"><span>Juggle</span>
-        </label>
-        </div>
-        <div class="service-button ballon">
-          <label>
-            <input type="checkbox" value="ballon-twisting"><span>Ballon Twisting</span>
-          </label>
-        </div>
-        <div class="service-button magic">
-          <label>
-          <input type="checkbox" value="magic-show"><span>Magic Show</span>
-        </label>
-        </div>
-        <div class="service-button photo">
-          <label>
-            <input type="checkbox" value="photo-booth"><span>Photo Booth</span>
-          </label>
-        </div>
-      <div class="service-button ar">
-        <label>
-          <input type="checkbox" value="ar-invitation"><span>AR Invitation</span>
-        </label>
-      </div>
-      <div class="service-button face">
-        <label>
-          <input type="checkbox" value="face-painting"><span>Face Painting</span>
-        </label>
-      </div>
-    </div>
-      <form class="form-box" method="get">
-        <div class="location-icon">
-          <label for="location">Location</label><br />
-          <i class="fa-sharp fa-solid fa-location-dot"></i>
-          <input
-            class="form-location"
-            type="location"
-            id="location"
-            name="location"
-            autocomplete="off"
-            placeholder="26 Scollard St"
-          />
-        </div>
-        <div class="form-box-one">
-          <label for="number">Number of people</label><br />
-          <select class="adult-num-select" id="adult">
-            <option value="1">1 Adults</option>
-            <option value="2">2 Adults</option>
-            <option value="3">3 Adults</option>
-            <option value="4">4 Adults</option>
-            <option value="5">5 Adults</option>
-          </select>
-          <select class="kid-num-select" id="kids">
-            <option value="1">1 Kids</option>
-            <option value="2">2 Kids</option>
-            <option value="3">3 Kids</option>
-            <option value="4">4 Kids</option>
-            <option value="5">5 Kids</option>
-            <option value="6">6 Kids</option>
-            <option value="7">7 Kids</option>
-            <option value="8">8 Kids</option>
-            <option value="9">9 Kids</option>
-            <option value="10">10 Kids</option>
-          </select>
-        </div>
-        <div class="form-box-two">
-          <div>
-            <label for="type">Type</label><br />
-            <select class="event-type-select" id="type-event">
-              <option value="birthday">Kids Birthday</option>
+        <div class="form-box">
+          <div class="location-icon">
+            <label for="location">Location</label><br />
+            <i class="fa-sharp fa-solid fa-location-dot"></i>
+            <input
+              type="text"
+              class="form-location"
+              name="location"
+              id="location"
+              autocomplete="off"
+              placeholder="26 Scollard St"
+              required
+            />
+          </div>
+          <div class="form-box-one">
+            <label for="number">Number of people</label><br />
+            <select
+              class="adult-num-select"
+              name="adult"
+              id="adult"
+              aria-label="Default select example"
+              required
+            >
+              <option value="1">1 Adult</option>
+              <option value="2">2 Adults</option>
+              <option value="3">3 Adults</option>
+              <option value="4">4 Adults</option>
+              <option value="5">5 Adults</option>
+            </select>
+            <select
+              class="kid-num-select"
+              name="kid"
+              id="kids"
+              aria-label="Default select example"
+              required
+            >
+              <option value="1">1 Kid</option>
+              <option value="2">2 Kids</option>
+              <option value="3">3 Kids</option>
+              <option value="4">4 Kids</option>
+              <option value="5">5 Kids</option>
+              <option value="6">6 Kids</option>
+              <option value="7">7 Kids</option>
+              <option value="8">8 Kids</option>
+              <option value="9">9 Kids</option>
+              <option value="10">10 Kids</option>
             </select>
           </div>
-          <div>
-            <label>Date</label><br />
-            <input class="date" type="date" id="date"/>
+          <div class="form-box-two">
+            <div>
+              <label for="eventType">Event Type</label><br />
+              <select
+                class="event-type-select"
+                name="eventType"
+                id="eventType"
+                aria-label="Default select example"
+                required
+              >
+                <option value="birthday">Kids Birthday</option>
+              </select>
+            </div>
+            <div>
+              <label for="date">Date</label><br />
+              <input class="date" type="date" name="date" id="date" required />
+            </div>
           </div>
         </div>
+        <button
+          type="submit"
+          id="book"
+          class="section-btn services-section-btn"
+        >
+          Book Now &gt
+        </button>
       </form>
-      <button class="section-btn services-section-btn btn-book btn-open">Book Now &gt</button>
       <div class="services-section-img">
         <img class="bubble" src="assets/images/puppy/bubble.png" alt="bubble" />
         <img class="puppy" src="assets/images/puppy/puppy.png" alt="puppy" />
       </div>
     </section>
-  <!-- Services Section End -->
+    <!-- Services Section End  -->
 
-  <!-- Contact Form Modal Start -->
-    <section class="modal-container">
-      <form class="booking-modal hidden" method="post" name="ContactForm" id="ContactForm" action="send-email.php">
-        <h3>Booking contact details</h3>
-        <p>Contact me via...</p>
-        <div class="input-box-one">
-          <div class="input-icons">
-          <img class="icon" src="./assets/images/booking_icon/png/email.png"></i>
-            <input
-              class="input-field"
-              type="text"
-              name="EmailAddress"
-              id="EmailAddress"
-              placeholder="Email"
-              required =""
-            />
-            </div>
-          <div class="input-icons">
-          <img class="icon" src="./assets/images/booking_icon/png/call.png"></i>
-          <input
-            class="input-field"
-            type="tel"
-            name="PhoneNo"
-            id="PhoneNo"
-            placeholder="Phone"
-            required =""
-          />
+    <!-- Booking Form Modal Start -->
+    <div
+      class="modal fade"
+      id="bookingModal"
+      tabindex="-1"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content booking-modal">
+          <div class="modal-header modal-header-title">
+            <h1 class="modal-title fs-5" id="exampleModalLabel">
+              Booking Contact Details
+            </h1>
+          </div>
+          <div class="modal-body">
+            <p>Contact me via...</p>
+            <form class="modalForm" name="modalForm" method="POST">
+              <div class="mb-3 input-icons">
+                <img class="icon" src="./assets/images/icon/png/person.png" />
+                <input
+                  type="text"
+                  class="form-control"
+                  name="yourName"
+                  id="name"
+                  aria-describedby="nameHelp"
+                  required
+                  placeholder="Your Name"
+                />
+              </div>
+              <div class="mb-3 input-icons">
+                <img
+                  class="icon"
+                  src="./assets/images/booking_icon/png/email.png"
+                />
+                <input
+                  type="email"
+                  class="form-control"
+                  name="email"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+              <div class="mb-3 input-icons">
+                <img
+                  class="icon"
+                  src="./assets/images/booking_icon/png/call.png"
+                />
+                <input
+                  type="text"
+                  class="form-control"
+                  name="phone"
+                  id="phone"
+                  placeholder="Phone"
+                />
+              </div>
+              <div class="mb-3 input-icons">
+                <img
+                  class="icon"
+                  src="./assets/images/booking_icon/png/message.png"
+                />
+                <textarea
+                  class="form-control"
+                  name="messageText"
+                  id="message-text"
+                  required
+                  placeholder="Message"
+                ></textarea>
+              </div>
+              <div class="modal-btn-box">
+                <button
+                  type="button"
+                  class="modal-btn btn-back"
+                  data-bs-dismiss="modal"
+                >
+                  Back
+                </button>
+                <button type="submit" class="modal-btn btn-complete">
+                  Complete
+                </button>
+              </div>
+            </form>
           </div>
         </div>
-        <div class="input-box-two">
-          <div class="input-icons">
-          <img class="icon" src="./assets/images/booking_icon/png/text.png"></i>
-          <input 
-            class="input-field text center" 
-            type="text" 
-            name="Text"
-            id="Text" 
-            placeholder="Text"
-            required =""
-           />
-          </div>
-          <div class="input-icons">
-          <img class="icon" src="./assets/images/booking_icon/png/call.png"></i>
-          <input class="input-field call center" 
-            type="call" 
-            name="Call"
-            id="Call" 
-            placeholder="Call"
-            required =""
-           />
-          </div>
-        </div>
-        <div class="input-icons">
-          <img class="icon" src="./assets/images/booking_icon/png/message.png"></i>
-        <textarea
-          class="input-field"
-          type="message"
-          name="Message"
-          id="Message"
-          placeholder="Message"
-          required =""
-        ></textarea>
-        </div>
-        <div class="modal-btn-box">
-          <button class="btn btn-close">Back</button>
-          <button type="submit" name="send"
-          value="Submit"
-          class="btn btn-submit">Complete</button>
-        </div>
-      </form>
-    </section>
-    <div class="overlay hidden"></div>
-  <!-- Contact Form Modal End -->
+      </div>
+    </div>
+    <!-- Booking Form Modal End -->
 
-  <!-- Footer Start -->
-    <footer class="footer-container" id="contactus" >
+    <!-- Footer Start -->
+    <footer class="footer-container" id="contactus">
       <div class="footer main-container">
         <div class="icons">
           <ul class="contact-links">
             <li>
-              <a class="contact-link" href="https://twitter.com/adsologist" target="_blank" title="twitter link">
+              <a
+                class="contact-link"
+                href="https://twitter.com/adsologist"
+                target="_blank"
+                title="twitter link"
+              >
                 <i class="fa-brands fa-twitter"></i>
               </a>
             </li>
             <li>
-              <a class="contact-link" href="https://www.facebook.com/profile.php?id=100084784291500" target="_blank" title="facebook link">
+              <a
+                class="contact-link"
+                href="https://www.facebook.com/profile.php?id=100084784291500"
+                target="_blank"
+                title="facebook link"
+              >
                 <i class="fa-brands fa-facebook"></i>
               </a>
             </li>
             <li>
-              <a class="contact-link" href="https://www.instagram.com/adsologist/" target="_blank" title="instagram link">
+              <a
+                class="contact-link"
+                href="https://www.instagram.com/adsologist/"
+                target="_blank"
+                title="instagram link"
+              >
                 <i class="fa-brands fa-instagram"></i>
               </a>
             </li>
             <li>
-              <a class="contact-link" href="https://www.tiktok.com/@adsologist?_t=8YkgoU5IzZO&_r=1" target="_blank"  title="tiktok link">
+              <a
+                class="contact-link"
+                href="https://www.tiktok.com/@adsologist?_t=8YkgoU5IzZO&_r=1"
+                target="_blank"
+                title="tiktok link"
+              >
                 <i class="fa-brands fa-tiktok"></i>
               </a>
             </li>
           </ul>
         </div>
-        <img class="footer-logo" src="assets/images/logo/png/logo_basic.png" alt="logo"/>
-        <div class="search-bar">
-          <img src="assets/images/icon/png/search_white.png" class="search" />
+        <img
+          class="footer-logo"
+          src="assets/images/logo/png/logo_basic.png"
+          alt="logo"
+        />
+        <div class="links-box">
+          <li>
+            <a class="contact-link" href="services.html"> SERVICE</a>
+          </li>
+          <li>
+            <a class="contact-link" href="contact.html">CONTACT US</a>
+          </li>
         </div>
       </div>
       <div class="contact-container main-container">
@@ -468,15 +706,21 @@
           </div>
           <div class="links-box">
             <li>
-              <a class="contact-link" href="#services"> SERVICE</a>
-            </li>
-            <li>
-              <a class="contact-link" href="#contactus">CONTACT US</a>
+              <a class="contact-link" href="mailto:hakunamadada@adsologist.com"
+                >hakunamadada@adsologist.com</a
+              >
             </li>
           </div>
         </div>
       </div>
     </footer>
-  <!-- Footer End-->
+    <!-- Footer End-->
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </body>
 </html>

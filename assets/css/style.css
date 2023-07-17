@@ -85,6 +85,9 @@ a:focus {
   text-decoration: none;
   outline: none;
 }
+a:link {
+  color: black;
+}
 input,
 textarea {
   width: 100%;
@@ -125,18 +128,25 @@ h1 {
 
 /*==========Common CSS End==========*/
 /* Header */
-.header {
+.main-header {
   background-color: #ffe69f;
   padding: 1rem;
   border-bottom: 1px solid black;
 }
-.login,
-.register {
+#service,
+#contact,
+#phoneno {
+  text-decoration: none;
+}
+.login-header,
+.register-header {
   background-color: #ffffff;
   padding: 1rem;
   border-bottom: 1px solid black;
 }
-.header .main-container {
+
+.header .main-container,
+.contact-section .main-container {
   display: flex;
   margin: 0 auto;
   justify-content: space-between;
@@ -158,9 +168,7 @@ h1 {
   display: block;
   padding: 8px 16px;
 }
-a:link {
-  color: black;
-}
+
 .navbar-toggleBtn {
   display: none;
   color: #262626;
@@ -169,12 +177,87 @@ a:link {
   left: 1rem;
   top: 1.9rem;
 }
+/* Services */
+.services-header {
+  background-color: #74baff;
+  padding: 1rem;
+  border-bottom: 1px solid black;
+}
+.services-section-two {
+  padding: 4.5rem 0 7rem;
+  background-color: #74baff;
+}
+
+/* Contact US */
+.contact-header .navbar-toggleBtn {
+  color: #ffffff;
+}
+.contact-header {
+  background-color: #262626;
+  padding: 1rem;
+  border-bottom: 1px solid white;
+}
+.contact-header .header-nav .header-menu a {
+  color: #ffffff;
+}
+.contact-header .header-nav .header-menu i {
+  color: #ffffff;
+}
+.contact-section {
+  height: 992px;
+  background-color: #262626;
+  color: #ffffff;
+}
+.contact-section .main-container {
+  padding: 22rem 0 5rem;
+}
+.contact-info-box h1 {
+  font-size: 8rem;
+}
+.contact-form-box {
+  width: 384px;
+  background-color: #262626;
+}
+.contact-form-box a {
+  color: #7e7e7e;
+}
+.contact-form-box input,
+.contact-form-box textarea {
+  width: 100%;
+  padding: 0.7rem 2rem;
+  background-color: #262626;
+  border: 1px solid #7e7e7e;
+  border-radius: 16px;
+  font-size: 0.9em;
+}
+.contact-form-box input::placeholder,
+.contact-form-box textarea::placeholder {
+  color: #ffffff;
+}
+.contact-form-box textarea {
+  background-color: #262626;
+  height: 140px;
+}
+.contact-btn-complete {
+  width: 100%;
+  padding: 0.75rem;
+  background-color: #262626;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  border-radius: 16px;
+}
+.booking-modal p {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  color: #7e7e7e;
+}
 .banner-section {
   padding: 4.5rem 0 7rem;
   background-color: #ffe69f;
 }
 .banner-section .main-container,
-.login-section .main-container {
+.login-section .main-container,
+.services-section-two .main-container {
   display: flex;
   justify-content: space-between;
   align-items: end;
@@ -191,6 +274,172 @@ a:link {
 .banner-img {
   overflow-x: hidden;
 }
+.services-main-image {
+  border-radius: 32px;
+}
+/* Slide Services Page */
+.services-slider-section {
+  background-color: #ffffff;
+}
+.service-sliders-description {
+  margin-top: 13rem;
+  font-size: 1.25rem;
+}
+.services-sliders-h2 {
+  font-family: Gilroy-Bold;
+  font-size: 3rem;
+  margin-bottom: 4.5rem;
+}
+.services-slider-section .main-container {
+  flex: flex;
+  margin: 0 auto;
+}
+.js .slider-single > div:nth-child(1n + 2) {
+  display: none;
+}
+
+.js .slider-single.slick-initialized > div:nth-child(1n + 2) {
+  display: block;
+}
+.slider-box {
+  position: relative;
+  opacity: 2;
+}
+.services-description-box {
+  position: absolute;
+  text-align: left;
+  color: #ffffff;
+  top: 3.5rem;
+  left: 16px;
+  opacity: 1;
+}
+.sliders-number {
+  margin-top: 10rem;
+  font-family: Gilroy-Bold;
+  font-size: 1.5rem;
+}
+.services-description-box-two {
+  text-align: center;
+}
+.services-title {
+  font-size: 0.75rem;
+}
+.slider-box-two img {
+  width: 325px;
+  margin: 3rem auto;
+}
+.services-type-two {
+  margin: 2rem 0;
+  font-family: Gilroy-Bold;
+  font-size: 3rem;
+}
+.services-description-two {
+  font-size: 2rem;
+}
+.services-price {
+  margin: 4rem 0;
+  font-family: Gilroy-Bold;
+  font-size: 3rem;
+}
+.services-type,
+.services-description {
+  font-size: 1rem;
+}
+.services-button {
+  width: 312px;
+  height: 48px;
+  background-color: #262626;
+  border-radius: 39px;
+  color: #ffffff;
+}
+.custom-slide {
+  width: 100%;
+  height: 376px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 5px 5px 5px #dedede76;
+}
+.slider-nav .slick-slide {
+  margin: 20px 5px;
+}
+
+/* Promotion-section */
+.promotion-section {
+  margin-top: 13rem;
+  border-top: 1px solid #707070;
+}
+.promotion-section h2 {
+  margin: 1rem 0;
+  font-family: Gilroy-Bold;
+  font-size: 3rem;
+}
+.promotion-section p {
+  font-size: 1.25rem;
+}
+.promotion-card-box {
+  margin: 4rem 0 10rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+.promotion-card {
+  width: 384px;
+  height: auto;
+}
+.promotion-card img {
+  width: 384px;
+  height: 376px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+.promotion-card h2 {
+  font-size: 2rem;
+  letter-spacing: -0.48px;
+  font-family: "Gilroy-Bold";
+}
+.promotion-card p {
+  font-size: 1.25rem;
+  letter-spacing: -0.4px;
+  color: #1d1d1d;
+}
+/* Reason Section */
+.reason-section {
+  margin: 12rem auto;
+}
+.reason-explain-box {
+  display: flex;
+  justify-content: space-between;
+}
+.reason-explain-box-left h2 {
+  font-family: "Gilroy-Bold";
+  font-size: 3rem;
+}
+.reason-explain-box-left p {
+  font-size: 1.25rem;
+  color: #1d1d1d;
+}
+.reason-explain-box-right {
+  width: 598px;
+}
+.reason-explain-box-right h2 {
+  font-family: "Gilroy-Bold";
+  font-size: 1.5rem;
+}
+.reason-explain-box-right p {
+  font-size: 1.25rem;
+  color: #4d4d4d;
+  line-height: 36px;
+}
+.testimonial-box-two {
+  margin: 0 1rem;
+  width: 384px;
+  height: 496px;
+  border-radius: 16px;
+  background-color: #f2f2f2;
+}
+.testimonial-box-two p {
+  font-size: 1.25rem;
+}
 /* Login */
 .login-section .main-container {
   background-color: #ffffff;
@@ -199,7 +448,6 @@ a:link {
 .find-userinfo-box {
   width: 486px;
   height: auto;
-  margin: 2rem auto;
 }
 .form-login {
   display: flex;
@@ -534,14 +782,21 @@ a:link {
   background-color: #f38058;
 }
 
-form {
+/* form {
   display: flex;
   justify-content: center;
-  margin: 0 auto;
+
   font-family: "Gilroy-Regular";
-}
+} */
 form p {
   color: #7e7e7e;
+}
+.form-check {
+  padding-left: unset;
+}
+.form-box {
+  display: flex;
+  margin: 0 auto;
 }
 .form-box-two {
   display: flex;
@@ -549,8 +804,9 @@ form p {
 ::-webkit-input-placeholder {
   text-align: left;
 }
-form label {
+.form-box label {
   color: #7e7e7e;
+  padding-left: 0.4rem;
 }
 .form-location {
   width: 376px;
@@ -563,7 +819,7 @@ form label {
 form select {
   width: 180px;
   height: 48px;
-  padding: 1rem;
+  padding: 0.5rem;
   margin: 0.5rem 0.5rem;
   border-radius: 20px;
   border: none;
@@ -591,51 +847,37 @@ form select {
   left: 45%;
 }
 /* Modal Start */
-.modal-container {
-  position: relative;
-  margin: 0 auto;
+.modal-header {
+  justify-content: center !important;
+  margin: 1em auto;
 }
-.booking-modal {
-  width: 432px;
+.modal-content .booking-modal {
+  max-width: 432px !important;
   padding: 1.3rem;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 0.4rem;
-  bottom: 20%;
-  left: 50%;
-  transform: translate(-50%, -20%);
+  margin: 7rem auto;
   background-color: white;
   box-shadow: 5px 5px 20px #4d4d4d26;
   border-radius: 24px;
 }
-.booking-modal p {
-  font-size: 1rem;
-}
-.booking-modal {
-  z-index: 2;
-}
-.hidden {
-  display: none;
-}
-.booking-modal h3 {
-  font-weight: bold;
-  margin: 3rem auto;
-}
-.modal-btn-box {
+.modal-body .modal-btn-box {
+  text-align: center;
   margin: 1rem auto;
 }
 .booking-modal input,
-textarea {
+.booking-modal textarea {
   width: 100%;
   padding: 0.7rem 2rem;
-  border: 1px solid #ddd;
+  border: 1px solid #7e7e7e;
   border-radius: 16px;
   font-size: 0.9em;
 }
 .booking-modal textarea {
   height: 140px;
+}
+.booking-modal p {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  color: #7e7e7e;
 }
 .input-icons {
   width: 100%;
@@ -655,7 +897,7 @@ textarea {
   padding: 5px;
   background-color: #ff5a5aa8;
 }
-.btn {
+.modal-btn {
   width: 180px;
   height: 40px;
   border-radius: 20px;
@@ -663,35 +905,15 @@ textarea {
   text-align: center;
   font-size: 1rem;
 }
-.input-box-one {
-  display: flex;
-  flex-direction: column;
-  gap: inherit;
-}
-.input-box-two {
-  display: flex;
-  gap: inherit;
-}
-.btn-close {
+.btn-back {
   background-color: #ffffff;
   color: #262626;
 }
-.btn-submit {
-  background-color: #262626;
+.btn-complete {
+  background-color: #262626 !important;
   color: #ffffff;
 }
-.overlay {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  backdrop-filter: blur(3px);
-  z-index: 1;
-}
+
 /* Modal End */
 
 /* Footer Start */
@@ -702,7 +924,7 @@ textarea {
   display: flex;
   margin: 0 auto;
   padding: 2rem 0;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   font-family: "Pretendard-Medium";
 }
@@ -717,19 +939,7 @@ textarea {
   color: white;
   transition: color 250ms ease-in;
 }
-.search-bar {
-  position: relative;
-  width: 204px;
-  height: 40px;
-  background-color: transparent;
-  border: 1px solid #ffffff;
-  border-radius: 20px;
-}
-.search {
-  position: absolute;
-  left: 80%;
-  top: 25%;
-}
+
 .contact a {
   color: #ffffff;
 }
@@ -749,6 +959,7 @@ textarea {
   color: #ffffff;
 }
 .links-box li {
+  font-family: pretendard, sans-serif;
   display: inline-block;
   margin: 0 0.5rem 0;
 }
@@ -758,14 +969,29 @@ textarea {
 /* Footer End */
 
 @media screen and (max-width: 1024px) {
-  #service {
-    display: none;
+  .header .main-container {
+    flex-direction: column;
+    padding: 8px 24px;
   }
-  #contact {
-    display: none;
+  .header-logo-img {
+    width: 200px;
+    height: auto;
   }
-  form {
-    flex-wrap: wrap;
+  .header-menu {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1rem 1rem;
+  }
+  .header-menu li {
+    width: 100%;
+    text-align: center;
+  }
+  .navbar-toggleBtn {
+    display: block;
+  }
+  .header-menu.open {
+    display: flex;
   }
   .btn-container {
     max-width: 780px;
@@ -774,14 +1000,24 @@ textarea {
     margin: 1rem 1rem 5.6rem;
   }
   .form-box {
+    margin-left: 4.5rem;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
   }
   .event-type-select,
   .date {
-    width: 350px;
+    width: 330px;
+  }
+  .location-icon i {
+    top: 56%;
+    left: 1rem;
+  }
+  .location-icon label {
+    margin-left: 11px;
   }
   .form-location {
+    margin-left: 11px;
     width: 260px;
   }
   .form-box-one {
@@ -793,6 +1029,26 @@ textarea {
   .form-box-one label,
   .form-box-two label {
     margin-left: 11px;
+  }
+
+  /* Contact-section */
+  .contact-section .main-container {
+    padding: 7rem 0 9rem;
+  }
+  .contact-info-box {
+    margin: 1.5rem;
+  }
+  .contact-info-box h1 {
+    font-size: 5rem;
+  }
+  .contact-info {
+    font-size: 1.25rem;
+  }
+  .contact-form-box {
+    width: 480px;
+  }
+  .contact-form-box p {
+    font-size: 1rem;
   }
 }
 
@@ -869,7 +1125,6 @@ textarea {
     font-size: 1.5rem;
   }
   .services-section .tags {
-    gap: 1rem;
     padding: 8px;
   }
   .services-section-img {
@@ -886,9 +1141,10 @@ textarea {
   }
   .contact-box {
     flex-direction: column;
+    gap: 1.5rem;
   }
   .tel-box a {
-    margin-right: unset;
+    margin-right: 0.5rem;
     font-size: 1.5rem;
   }
   form {
@@ -902,39 +1158,31 @@ textarea {
   .form-box-one {
     margin: 0;
   }
+  /* Contact-section */
+  .contact-section .main-container {
+    flex-direction: column;
+  }
+  .contact-section .main-container {
+    padding: 7rem 0 5rem;
+  }
+  .contact-info-box {
+    margin: 2rem;
+  }
+  .contact-info-box h1 {
+    font-size: 6rem;
+  }
+  .contact-info {
+    font-size: 1.5rem;
+  }
+  .contact-form-box {
+    width: 560px;
+  }
+  .contact-form-box p {
+    font-size: 1rem;
+  }
 }
 
 @media screen and (max-width: 598px) {
-  #service {
-    display: unset;
-  }
-  #contact {
-    display: unset;
-  }
-  .header .main-container {
-    flex-direction: column;
-    padding: 8px 24px;
-  }
-  .header-logo-img {
-    width: 200px;
-    height: auto;
-  }
-  .header-menu {
-    display: none;
-    flex-direction: column;
-    gap: 1rem;
-    margin: 1rem 1rem;
-  }
-  .header-menu li {
-    width: 100%;
-    text-align: center;
-  }
-  .navbar-toggleBtn {
-    display: block;
-  }
-  .header-menu.open {
-    display: flex;
-  }
   .section-banner {
     padding: 3rem 0 3rem;
   }
@@ -956,10 +1204,72 @@ textarea {
   .word-box-3 {
     display: none;
   }
-  .section-banner .main-container {
+  .section-banner .main-container,
+  .services-section-two .main-container {
     margin: 1rem;
     flex-direction: column-reverse;
     align-items: start;
+  }
+  /* Contact-section */
+
+  .contact-section .main-container {
+    padding: 5rem 0 0rem;
+  }
+  .contact-info-box {
+    margin: 2rem;
+  }
+  .contact-info-box h1 {
+    font-size: 3rem;
+  }
+  .contact-info {
+    font-size: 1rem;
+  }
+  .contact-form-box {
+    width: 320px;
+  }
+  .contact-form-box p {
+    font-size: 1rem;
+  }
+  /* Promotion Section */
+  .promotion-section h2 {
+    margin: 2rem 2rem 1rem;
+  }
+  .promotion-section p {
+    margin-left: 2rem;
+    font-size: 1.25rem;
+  }
+  .promotion-card {
+    margin: 0 auto;
+  }
+  .promotion-card,
+  .promotion-card img {
+    width: 320px;
+    height: 310px;
+  }
+  .promotion-card-box,
+  .reason-explain-box {
+    flex-direction: column;
+    margin-left: 1rem;
+  }
+  .testimonial-box-two,
+  .reason-explain-box-right {
+    width: 320px;
+    margin: 0 auto;
+  }
+  .reason-explain-box-left {
+    width: 320px;
+    margin: 2rem auto;
+  }
+  .slider-box-two img {
+    width: 280px;
+    margin: 3rem auto;
+  }
+  .services-description-two {
+    padding: 0.5rem;
+    font-size: 1.3rem;
+  }
+  .services-price {
+    font-size: 1.5rem;
   }
   .section-animation-box h2 {
     padding: 0.5rem 0;
@@ -994,10 +1304,6 @@ textarea {
   .services-section-btn {
     font-size: 1.5rem;
   }
-  .booking-modal {
-    width: 320px;
-    height: auto;
-  }
   form select {
     padding: 0.5rem;
   }
@@ -1005,8 +1311,8 @@ textarea {
     font-size: 0.9rem;
     color: #7e7e7e;
   }
-  .modal-btn-box {
-    text-align: center;
+  .form-box {
+    margin-left: 1rem;
   }
   .form-location {
     width: 300px;
@@ -1054,7 +1360,8 @@ textarea {
   .links-box a {
     font-size: 0.75rem;
   }
-  .search-bar {
-    display: none;
+  .modal-btn-box {
+    display: flex;
+    gap: 0.5rem;
   }
 }

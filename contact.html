@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Hakunamadada</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Website for Hakunamadada" />
+    <meta name="author" content="hakunamadada" />
+    <!-- OG (Open Graph Data) -->
+    <meta property="og:title" content="hakunamadada" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://kateseo0826.github.io/hakunamadada/"
+    />
+    <meta
+      property="og:image"
+      content="https://kateseo0826.github.io/hakunamadada/assets/og.webp"
+    />
+    <meta name="appleid-signin-client-id" content="[CLIENT_ID]" />
+    <meta name="appleid-signin-scope" content="[SCOPES]" />
+    <meta name="appleid-signin-redirect-uri" content="[REDIRECT_URI]" />
+    <meta name="appleid-signin-state" content="[STATE]" />
+    <!-- FavIcon CSS -->
+    <link
+      rel="shortcut icon"
+      href="assets/images/logo_basic.ico"
+      type="image/x-icon"
+    />
+    <!-- Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <!-- Main Style CSS  -->
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <script src="./main.js" defer></script>
+    <meta name="google-signin-client_id"
+    content="256233461697-6donutt593apr32vq2qq02s1adujj6vk.apps.googleusercontent.com""
+    />
+    <!--Font Awesome Icon CSS-->
+    <link
+      rel="stylesheet"
+      href="path/to/font-awesome/css/font-awesome.min.css"
+    />
+    <script
+      src="https://kit.fontawesome.com/9eb162ac0d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Header start-->
+    <header class="header contact-header">
+      <!--Navbar Start  -->
+      <div class="main-container">
+        <!-- Site Logo Start -->
+        <div class="header-logo">
+          <a href="/"
+            ><img
+              class="header-logo-img"
+              src="assets/images/logo/png/logo_white.png"
+              alt="logo"
+          /></a>
+        </div>
+        <!-- Site Logo End -->
+        <nav class="header-nav">
+          <ul class="header-menu">
+            <li>
+              <a class="header-menu-item" href="tel:+14372863387"
+                >+1 437 286 3387</a
+              >
+            </li>
+            <li class="search-bar" style="border-color: white">
+              <img
+                src="assets/images/icon/png/search_white.png"
+                class="search"
+              />
+            </li>
+            <li>
+              <a id="service" class="header-menu-item" href="services.html"
+                >SERVICE</a
+              >
+            </li>
+            <li>
+              <a id="contact" class="header-menu-item" href="contact.html"
+                >CONTACT US</a
+              >
+            </li>
+            <li>
+              <i class="header-menu-item fa-regular fa-bell"></i>
+            </li>
+            <li>
+              <a title="login" href="login.html"
+                ><i class="header-menu-item fa-regular fa-user"></i
+              ></a>
+            </li>
+          </ul>
+          <a href="#" class="navbar-toggleBtn">
+            <i class="fa-solid fa-bars"></i>
+          </a>
+        </nav>
+      </div>
+      <!--Navbar End  -->
+    </header>
+    <!-- Header End -->
+    <!-- Contact Us Section Start -->
+    <section class="contact-section">
+      <div class="main-container">
+        <div class="contact-info-box">
+          <h1>CONTACT<br />US</h1>
+          <p class="contact-info">Email : hakunamadada@adsologist.com</p>
+          <p class="contact-info">Phone# : 437)255-0237</p>
+          <p class="contact-info">
+            Address : 26 Scollard Street, Toronto ON, M5R 1E9
+          </p>
+        </div>
+        <div class="contact-form-box">
+          <p>Contact me via...</p>
+          <form
+            method="POST"
+            name="ContactForm"
+            id="ContactForm"
+            action="send-email.php"
+          >
+            <div class="mb-3 input-icons">
+              <img class="icon" src="./assets/images/icon/png/person.png" />
+              <input
+                type="text"
+                class="form-control"
+                name="yourName"
+                id="name"
+                aria-describedby="nameHelp"
+                required
+                placeholder="Name"
+              />
+            </div>
+            <div class="mb-3 input-icons">
+              <img
+                class="icon"
+                src="./assets/images/booking_icon/png/email.png"
+              />
+              <input
+                type="email"
+                class="form-control"
+                name="email"
+                id="exampleInputEmail1"
+                aria-describedby="emailHelp"
+                placeholder="Email"
+                required
+              />
+            </div>
+            <div class="mb-3 input-icons">
+              <img
+                class="icon"
+                src="./assets/images/booking_icon/png/call.png"
+              />
+              <input
+                type="text"
+                class="form-control"
+                name="phone"
+                id="phone"
+                placeholder="Phone"
+              />
+            </div>
+            <div class="mb-3 input-icons">
+              <img
+                class="icon"
+                src="./assets/images/booking_icon/png/message.png"
+              />
+              <textarea
+                class="form-control"
+                name="messageText"
+                id="message-text"
+                required
+                placeholder="Message"
+              ></textarea>
+            </div>
+            <button type="submit" class="contact-btn-complete">COMPLETE</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
