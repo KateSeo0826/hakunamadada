@@ -122,11 +122,13 @@ $message = cleanInput($message);
                 $altBody_To = "Thank you for enquiring with us, one of our experts will be in touch with you as soon as possible.";
                 $addAddress = $email;
                 sendMail($subject_To,$messageBody_To,$altBody_To,$addAddress);
+        if($mail -> send()) {
+           ob_clean(); 
+           exit(json_encode(array('message'=>$responseMessage)));
     } else {
         //echo 'Invalid Email Format'
         echo '<div class="alert alert-warning" role="alert"><i class="fa-solid fa-circle-exclamation"></i>Please enter a valid email address</div>';
     }
-    echo json_encode($responseMessage)
 }
 
 //Sanitize user Input to escape HTML entities and filter out dangerous characters.

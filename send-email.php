@@ -180,7 +180,8 @@ function sendMail($subject, $messageBody, $altBody, $addAddress, $responseMessag
         $mail->Body = $messageBody;
         $mail->AltBody = $altBody;
         if($mail -> send()) {
-            echo $responseMessage;
+            ob_clean(); 
+             exit(json_encode(array('message'=>$responseMessage)));
         } else {
             echo '<div class="alert alert-warning" role="alert">'.$MessageFaultText.'</div>';
         }
