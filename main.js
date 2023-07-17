@@ -38,9 +38,9 @@ formEl.addEventListener('submit', (e) => {
             dataType: 'json',
             type: 'POST',
             data: data3,
-            success: function (data) {
-                console.log(res['status']);
-                $('#bookingModal').html(res['status'])
+            success: function (res) {
+                console.log(res['message']);
+                $('#bookingModal').html(res['message'])
             }
         })
     })
