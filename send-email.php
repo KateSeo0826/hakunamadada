@@ -1,25 +1,43 @@
 <?php
+header('Content-Type: application/json');
+
 use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\SMTP;
 
 require 'vendor/autoload.php';
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    if (!filter_has_var(INPUT_POST, "submit")) {
+        
+        if (!empty($_POST['services'])) {
+            foreach($_POST['services'] as $value) {
+                if (!empty($value)) {
+                    $checkedServices[] = $value;
+                }
+            }
+            
+            if (is_array($checkedServices)) {
+                $services = implode(",", $checkedServices);
+            }
+        }
+        
+        $location = $_POST["location"];
+        $adult = $_POST["adult"];
+        $kids = $_POST["kids"];
+        $eventType = $_POST["eventType"];
+        $date = $_POST["date"];
 
         $email = $_POST['email'];
         $name = $_POST["yourName"];
         $phone = $_POST['phone'];  
         $message = $_POST['messageText'];
+
         $email = sanitizeEmail($email);
         $name = cleanInput($name);  
         $phone = cleanInput($phone);  
         $message = cleanInput($message);
         
-if(empty($email) || empty($phone) || empty($name) || empty($message)) {
-      echo '<div class="alert alert-warning" role="alert"><i class="fas fa-exclamation-circle"></i> Please complete all required fields!</div>';
-      exit;
-     }
-     else{
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL) === false) { 
         // Send Email to admin
         $subject = "Contact Form";
         $message = cutString($message, 1000);                
@@ -41,16 +59,6 @@ if(empty($email) || empty($phone) || empty($name) || empty($message)) {
         $altBody = "Name";
         $addAddress = "kateseo@adsologist.com"; 
         $responseMessage = '
-    <div
-        class="modal fade"
-        id="bookingModal"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content booking-modal">
-            <div class="modal-body">
                 <div style="width: 432px; height: 500px; margin: 5rem auto; background-color: #FFFFFF; border-radius: 1.5rem; box-shadow: 5px 5px 20px #4D4D4D26; z-index: 1;" class="alert alert-success" role="alert">
                     <i class="fa-solid fa-circle-check"></i>
                     <div style="padding: 2rem 1rem;">
@@ -69,10 +77,6 @@ if(empty($email) || empty($phone) || empty($name) || empty($message)) {
                         </div>
                     </div>
                 </div>
-            </div>
-          </div>
-        </div>
-      </div>
             ';
 
         sendMail($subject, $messageBody, $altBody, $addAddress, $responseMessage);
@@ -161,7 +165,7 @@ function sendMail($subject, $messageBody, $altBody, $addAddress, $responseMessag
         $mail->Host = 'smtp.gmail.com';
         $mail->Port = 587;
 
-        $mail->SMTPSecure = 'ssl';   
+        $mail->SMTPSecure = 'tls';   
         $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;;
         $mail->SMTPAuth = true;
 
@@ -180,8 +184,8 @@ function sendMail($subject, $messageBody, $altBody, $addAddress, $responseMessag
         $mail->Body = $messageBody;
         $mail->AltBody = $altBody;
         if($mail -> send()) {
-            ob_clean(); 
-             exit(json_encode(array('message'=>$responseMessage)));
+           ob_clean(); 
+            exit(json_encode(array('message'=>$responseMessage)));
         } else {
             echo '<div class="alert alert-warning" role="alert">'.$MessageFaultText.'</div>';
         }

@@ -4,15 +4,14 @@ use PHPMailer\PHPMailer\SMTP;
 
 require 'vendor/autoload.php';
 
-
-        $email = $_POST['email'];
-        $name = $_POST["yourName"];
-        $phone = $_POST['phone'];  
-        $message = $_POST['messageText'];
-        $email = sanitizeEmail($email);
-        $name = cleanInput($name);  
-        $phone = cleanInput($phone);  
-        $message = cleanInput($message);
+$email = $_POST['email'];
+$name = $_POST["yourName"];
+$phone = $_POST['phone'];  
+$message = $_POST['messageText'];
+$email = sanitizeEmail($email);
+$name = cleanInput($name);  
+$phone = cleanInput($phone);  
+$message = cleanInput($message);
         
 if(empty($email) || empty($phone) || empty($name) || empty($message)) {
       echo '<div class="alert alert-warning" role="alert"><i class="fas fa-exclamation-circle"></i> Please complete all required fields!</div>';
