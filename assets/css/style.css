@@ -213,9 +213,6 @@ h1 {
 .contact-info-box h1 {
   font-size: 8rem;
 }
-.contact-info a {
-  color: #ffffff;
-}
 .contact-form-box {
   width: 384px;
   background-color: #262626;
@@ -258,7 +255,6 @@ h1 {
   background-color: #ffe69f;
 }
 .banner-section .main-container,
-.login-section .main-container,
 .services-section-two .main-container {
   display: flex;
   justify-content: space-between;
@@ -503,14 +499,26 @@ h1 {
   }
 }
 
-/* Login */
-.login-section .main-container {
+/* Error */
+.error-section .main-container {
+  margin: 5rem auto;
+  text-align: center;
   background-color: #ffffff;
 }
-.login-box-one,
-.find-userinfo-box {
-  width: 486px;
-  height: auto;
+.error-box {
+  display: flex;
+  flex-direction: column;
+  width: 588px;
+}
+.error-h1 {
+  font-size: 10rem;
+}
+.error-btn {
+  width: 227px;
+  height: 64px;
+  margin: 3rem auto;
+  background-color: #262626;
+  color: #ffffff;
 }
 .form-login {
   display: flex;
@@ -1293,7 +1301,8 @@ form select {
   .contact-info {
     font-size: 1.5rem;
   }
-
+  .contact-info a {
+  }
   .contact-form-box {
     width: 560px;
   }
