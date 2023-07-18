@@ -1,3 +1,15 @@
+/* Toggle Button*/
+const navbarMenu = document.querySelector('.header-menu')
+const toggleBtn = document.querySelector('.navbar-toggleBtn')
+
+toggleBtn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('open')
+})
+
+//Navbar menu click 
+navbarMenu.addEventListener('click', () => {
+    navbarMenu.classList.remove('open')
+})
 const formEl = document.querySelector('.form');
 formEl.addEventListener('submit', (e) => {
     e.preventDefault();
@@ -78,18 +90,7 @@ let c_day = c_year + "-" + c_month + "-" + c_date;
 
 document.getElementById("date").value = c_day;
 
-/* Toggle Button*/
-const navbarMenu = document.querySelector('.header-menu')
-const toggleBtn = document.querySelector('.navbar-toggleBtn')
 
-toggleBtn.addEventListener('click', () => {
-    navbarMenu.classList.toggle('open')
-})
-
-//Navbar menu click 
-navbarMenu.addEventListener('click', () => {
-    navbarMenu.classList.remove('open')
-})
 // slide
 const slider = document.getElementsByClassName('slider')
 
