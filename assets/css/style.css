@@ -1529,6 +1529,10 @@ form select {
   .services-section-btn {
     font-size: 1.5rem;
   }
+  .booking-modal {
+    width: 320px;
+    height: auto;
+  }
   form select {
     padding: 0.5rem;
   }
