@@ -755,7 +755,7 @@ h1 {
 }
 .btn-container {
   max-width: 1200px;
-  margin: 9rem auto 3rem;
+  margin: 8rem auto 3rem;
   display: flex;
   flex-wrap: wrap;
   gap: 1.5rem;
@@ -1146,6 +1146,15 @@ form select {
   .promotion-card p {
     font-size: 1rem;
   }
+  .service-sliders-description {
+    margin-left: 1rem;
+  }
+  .services-sliders-h2 {
+    margin-left: 1rem;
+  }
+  .services-description-two {
+    font-size: 1.75rem;
+  }
 }
 
 @media screen and (max-width: 820px) {
@@ -1321,6 +1330,9 @@ form select {
     border-radius: 16px;
     background-color: #f2f2f2;
   }
+  .form-box {
+    margin-left: 4rem;
+  }
   /* .reason-explain-box-820 */
   .reason-section {
     margin: 4rem auto;
@@ -1336,17 +1348,14 @@ form select {
     width: 720px;
     margin: 2rem auto;
   }
-  .services-description-two {
-    width: 720px;
-  }
   .sliders-number {
     margin-top: 8rem;
   }
   .service-sliders-description {
-    margin-left: 0.5rem;
+    margin-left: 1rem;
   }
   .services-sliders-h2 {
-    margin-left: 0.5rem;
+    margin-left: 1rem;
     font-size: 2.5rem;
   }
 }
@@ -1471,7 +1480,6 @@ form select {
   .promotion-card-box {
     flex-direction: column;
   }
-  .testimonial-box-two,
   .reason-explain-box-right {
     width: 300px;
     margin: 0 auto;
@@ -1604,5 +1612,9 @@ form select {
   }
   .testimonial-box-two p {
     font-size: 1rem;
+  }
+  .testimonial-box-two {
+    width: 290px;
+    margin: 0 auto;
   }
 }
