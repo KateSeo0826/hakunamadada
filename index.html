@@ -87,7 +87,7 @@
               <i class="header-menu-item fa-regular fa-bell"></i>
             </li> -->
             <li>
-              <a title="login" href="login.html"
+              <a title="login" href="https://staging.adsologist.com/login"
                 ><i class="header-menu-item fa-regular fa-user"></i
               ></a>
             </li>
@@ -304,23 +304,14 @@
     <!-- Events Cards Section End -->
 
     <!-- Services Section Start -->
-    <style>
-      #check1 {
-        position: absolute;
-        z-index: -1;
-      }
-
-      #check1:checked + #checked {
-        background-color: tomato !important;
-      }
     </style>
     <section class="services-section" id="services">
       <form class="form" name="reservation" method="post">
         <div class="btn-container services tags">
+          <h3 id="confirm"></h3>
           <div class="form-check service-button fire">
             <label class="form-check-label" for="check1" id="checked"
-              >Fire Breathing</label
-            >
+           
             <input
               type="checkbox"
               class="form-check-input"
@@ -329,6 +320,8 @@
               id="check1"
               required
             />
+              <span> Fire Breathing</span>
+              </label>
           </div>
           <div class="service-button mascot form-check">
             <label class="form-check-label" for="check2">
