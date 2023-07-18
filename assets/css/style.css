@@ -204,12 +204,11 @@ h1 {
   color: #ffffff;
 }
 .contact-section {
-  height: 992px;
   background-color: #262626;
   color: #ffffff;
 }
 .contact-section .main-container {
-  padding: 22rem 0 5rem;
+  padding: 20rem 0 5rem;
 }
 .contact-info-box h1 {
   font-size: 8rem;
@@ -1113,9 +1112,9 @@ form select {
     margin-left: 11px;
   }
 
-  /* Contact-section */
+  /* Contact-section - 1024 */
   .contact-section .main-container {
-    padding: 7rem 0 9rem;
+    padding: 5rem 0 11rem;
   }
   .contact-info-box {
     margin: 1.5rem;
@@ -1280,7 +1279,7 @@ form select {
     flex-direction: column;
   }
   .contact-section .main-container {
-    padding: 7rem 0 5rem;
+    padding: 5rem 0 5rem;
   }
   .contact-info-box {
     margin: 2rem;
@@ -1435,7 +1434,7 @@ form select {
   }
   /* Contact-section -598*/
   .contact-section .main-container {
-    padding: 5rem 0 0rem;
+    padding: 5rem 0 5rem;
   }
   .contact-info-box {
     margin: 2rem;
@@ -1593,8 +1592,16 @@ form select {
     display: flex;
     gap: 0.5rem;
   }
+  /**/
+  #check1 {
+    position: absolute !important;
+    z-index: -1 !important;
+  }
 
-  /* .reason-explain-box - 598px */
+  #check1:checked + label {
+    background-color: tomato !important;
+  }
+
   .reason-section {
     margin: 3rem auto;
   }
