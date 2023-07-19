@@ -289,6 +289,7 @@ h1 {
   font-size: 3rem;
   margin-bottom: 4.5rem;
 }
+
 .services-slider-section .main-container {
   flex: flex;
   margin: 0 auto 5rem;
@@ -302,7 +303,12 @@ h1 {
 }
 .slider-box {
   position: relative;
-  opacity: 2;
+}
+.sliders-number {
+  color: #ffffff;
+  position: absolute;
+  bottom: 5%;
+  right: 10%;
 }
 .services-description-box {
   position: absolute;
@@ -310,7 +316,6 @@ h1 {
   color: #ffffff;
   top: 3.5rem;
   left: 16px;
-  opacity: 1;
 }
 .sliders-number {
   margin-top: 10rem;
@@ -1427,8 +1432,7 @@ form select {
     text-orientation: mixed;
   }
   .sliders-number {
-    position: absolute;
-    top: 80%;
+    left: 10%;
   }
   .slider-nav {
     margin: 0 0.5rem;
