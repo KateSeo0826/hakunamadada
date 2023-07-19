@@ -382,6 +382,7 @@
                   src="assets/images/services-image/service_card_14.png"
                   alt="service_card_14"
                   srcset=""
+                  o
                 />
                 <div class="services-description-box">
                   <p class="services-title">Bursting delight</p>
@@ -793,7 +794,7 @@
     <!-- Reason Section End -->
 
     <!-- Testimonial Section Start -->
-    <section class="testimonial-section main-container">
+    <!-- <section class="testimonial-section main-container">
       <div
         id="carouselExampleControls"
         class="carousel slide"
@@ -1011,7 +1012,7 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-    </section>
+    </section> -->
     <!-- Testimonial Section End -->
     <!-- Services Section Start -->
     <section class="services-section" id="services">
@@ -1431,6 +1432,7 @@
         asNavFor: ".slider-nav",
       });
       $(".slider-nav").slick({
+        autoplay: true,
         slidesToShow: 3,
         slidesToScroll: 1,
         asNavFor: ".slider-single",
