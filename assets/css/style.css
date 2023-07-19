@@ -169,7 +169,6 @@ h1 {
   display: block;
   padding: 8px 16px;
 }
-
 .navbar-toggleBtn {
   display: none;
   color: #262626;
@@ -1017,7 +1016,6 @@ form select {
   color: white;
   transition: color 250ms ease-in;
 }
-
 .contact a {
   color: #ffffff;
 }

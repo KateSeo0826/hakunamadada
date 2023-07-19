@@ -10,6 +10,10 @@ toggleBtn.addEventListener('click', () => {
 navbarMenu.addEventListener('click', () => {
     navbarMenu.classList.remove('open')
 })
+<<<<<<< HEAD
+=======
+
+>>>>>>> 83a6c81... change contact html
 const formEl = document.querySelector('.form');
 formEl.addEventListener('submit', (e) => {
     e.preventDefault();
