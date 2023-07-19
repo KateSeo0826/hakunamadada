@@ -207,6 +207,9 @@ h1 {
   background-color: #262626;
   color: #ffffff;
 }
+.contact-info a {
+  color: #ffffff;
+}
 .contact-section .main-container {
   padding: 20rem 0 8rem;
 }
@@ -1305,9 +1308,6 @@ form select {
   }
   .contact-info {
     font-size: 1.5rem;
-  }
-  .contact-info a {
-    color: #ffffff;
   }
   .contact-form-box {
     width: 560px;
