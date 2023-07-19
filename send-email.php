@@ -46,14 +46,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $messageBody = '
             <table border="1" width="100%" cellspacing="3" cellpadding="4">
                 <tbody>
-                    <tr> <td style="font-size: 14px; font-weight: bold; background-color: #000000; color: #FFFFFF;">E-Mail</td> </tr>
-                    <tr> <td>'.$email.'</td> </tr>
-                    <tr> <td style="font-size: 14px; font-weight: bold; background-color: #000000; color: #FFFFFF;">Name</td> </tr>
-                    <tr> <td>'.$name.'</td> </tr>                           
-                    <tr> <td style="font-size: 14px; font-weight: bold; background-color: #000000; color: #FFFFFF;">Phone</td> </tr>
-                    <tr> <td>'.$phone.'</td> </tr>
-                    <tr> <td style="font-size: 14px; font-weight: bold; background-color: #000000; color: #FFFFFF;">Message</td> </tr>
-                    <tr> <td>'.$message.'</td> </tr>   
+                <tr> <td style="font-size: 14px; font-weight: bold; background-color: #000000; color: #FFFFFF;">E-Mail</td> </tr>
+                <tr> <td>'.$email.'</td> </tr>
+                <tr> <td style="font-size: 14px; font-weight: bold; background-color: #000000; color: #FFFFFF;">Name</td> </tr>
+                <tr> <td>'.$name.'</td> </tr>                           
+                <tr> <td style="font-size: 14px; font-weight: bold; background-color: #000000; color: #FFFFFF;">Phone</td> </tr>
+                <tr> <td>'.$phone.'</td> </tr>
+                <tr> <td style="font-size: 14px; font-weight: bold; background-color: #000000; color: #FFFFFF;">Message</td> </tr>
+                <tr> <td>'.$message.'</td> </tr>
+                <tr> <td style="font-size: 14px; font-weight: bold; background-color: #000000; color: #FFFFFF;">Location</td> </tr>
+                <tr> <td>'.$location.'</td> </tr>
+                <tr> <td style="font-size: 14px; font-weight: bold; background-color: #000000; color: #FFFFFF;">Adults Numbers</td> </tr>
+                <tr> <td>'.$adult.'</td> </tr>
+                <tr> <td style="font-size: 14px; font-weight: bold; background-color: #000000; color: #FFFFFF;">Kids Numbers</td> </tr>
+                <tr> <td>'.$kid.'</td> </tr>
+                <tr> <td style="font-size: 14px; font-weight: bold; background-color: #000000; color: #FFFFFF;">Event Type</td> </tr>
+                <tr> <td>'.$eventType.'</td> </tr>
+                <tr> <td style="font-size: 14px; font-weight: bold; background-color: #000000; color: #FFFFFF;">Date</td> </tr>
+                <tr> <td>'.$date.'</td> </tr>
+                <tr> <td style="font-size: 14px; font-weight: bold; background-color: #000000; color: #FFFFFF;">Services</td> </tr>
+                <tr> <td>'.$services.'</td> </tr>
                 </tbody>
             </table>';
         $altBody = "Name";
@@ -61,18 +73,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $responseMessage = '
                 <div style="width: 432px; height: 500px; margin: 5rem auto; background-color: #FFFFFF; border-radius: 1.5rem; box-shadow: 5px 5px 20px #4D4D4D26; z-index: 1;" class="alert alert-success" role="alert">
                     <i class="fa-solid fa-circle-check"></i>
-                    <div style="padding: 2rem 1rem;">
+                    <div style="padding: 1.5rem 1rem;">
                         <h2 style="text-align: center; font-size: 1.5rem; font-weight: bold;">Completed!</h2>
                         <p style="color: #7E7E7E; margin-top: 2rem; font-size: 0.8rem">Our agent will contact you within 2-3 business days.</p>
                         <h3 style="color: #7E7E7E; font-size: 1rem">Name<h3>
-                        <p style="font-size: 1.1rem;color: black;">'.$name.'</p>
+                        <p style="font-size: 1rem;color: black;">'.$name.'</p>
+                        <h3 style="color: #7E7E7E; font-size: 1rem">Email<h3>
+                        <p style="font-size: 1rem;color: black;">'.$email.'</p>
                         <h3 style="color: #7E7E7E; padding-bottom: 0; font-size: 1rem;">Phone Number<h3>
-                        <p style="font-size: 1.1rem; color:black;">+'.$phone.'</p>
+                        <p style="font-size: 1rem; color:black;">+'.$phone.'</p>
                         <h3 style="color: #7E7E7E; font-size: 1rem">Message<h3>
-                        <p style="font-size: 1.1rem; color:black;">'.$message.'</p>
+                        <p style="font-size: 1rem; color:black;">'.$message.'</p>
                         <div style="text-align:center;">
                             <button style="background-color: #262626; outline: none; width: 180px; height: 40px; border-radius: 20px; text-align: center; font-size: 1rem; margin-top:2rem;">
-                                <a style="text-decoration: none; color: #ffffff;" href="/hakunamadada">Confirm</a>
+                            <a style="text-decoration: none; color: #ffffff;" href="/hakunamadada">Confirm</a>
                             </button>
                         </div>
                     </div>
@@ -82,7 +96,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         sendMail($subject, $messageBody, $altBody, $addAddress, $responseMessage);
 
         // Send email to User
-        $companyName = "Adsologist Inc.";
+        $companyName = "Hakuna Madada";
         $site_url = "https://www.adsologist.com";
         $site_phone = "+1 437 255 0237";
         $subject_To = "Thank you for enquiring with us, one of our experts will be in touch with you as soon as possible.";
@@ -93,7 +107,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                         <td>
                             <table border="0" cellspacing="0" cellpadding="0" align="center" style="width: 600px; max-width: 100%; background-color: #2a2a2a; border: 1px solid #CCC; padding: 50px; border-radius: 10px;">
                                 <tbody>                            
-                                    <tr> <td align="center" style="padding-bottom: 20px;"><img src="'.$site_url.'/assets/images/logo.png" alt="ADsologist Logo"></td> </tr>
+                                    <tr> <td align="center" style="padding-bottom: 20px;"><img src="'.$site_url.'/assets/images/logo_hakunamadada.png" alt="Hakunamadada Logo"></td> </tr>
                                     <tr> <td>&nbsp;</td> </tr>
                                     <tr> <td align="center" valign="middle" style="color: #ffffff; font-family: Arial, Helvetica, sans-serif; font-size: 18px; font-weight: bold; padding-bottom: 20px;">Dear '.$name.'</td> </tr>
                                     <tr> <td>&nbsp;</td> </tr>
@@ -107,7 +121,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     <tr> <td align="center" valign="middle" style="color: #ffffff; font-family: Arial, Helvetica, sans-serif; font-size: 13px; line-height: 20px; font-weight: bold;">The ADsologist Team.</td> </tr>                            
                                     <tr> <td>&nbsp;</td> </tr>
                                     <tr> <td>&nbsp;</td> </tr>
-                                    <tr> <td align="center" valign="middle" style="color: #ffffff; font-family: Arial, Helvetica, sans-serif; font-size: 13px;">If you need help or have any questions, please visit <a href="'.$site_url.'/contact.html" style="color:#0094aa;">'.$site_url.'/contact</a><br /> Or you can reach it at '.$site_phone.'.</td> </tr>                            
+                                    <tr> <td align="center" valign="middle" style="color: #ffffff; font-family: Arial, Helvetica, sans-serif; font-size: 13px;">If you need help or have any questions, please visit <a href="https://kateseo0826.github.io/hakunamadada/contact.html" style="color:#0094aa;">https://kateseo0826.github.io/hakunamadada/contact</a><br /> Or you can reach it at '.$site_phone.'.</td> </tr>                            
                                 </tbody>
                             </table>
                         </td>
